@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>973</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>BusStrategy
+--
+
+--
++travelAlgorithm():void
+--
+Responsibilities
+-- implements the strategy 
+that travel by bus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>791</y>
+      <w>196</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>PersonTravel
+--
+-strategy:TravelStrategy
+--
++setStrategy(TravelStrategy strategy):void
++travel():void
+--
+Responsibilities
+-- policy subject</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>182</x>
+      <y>910</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>this.strategy.travelAlgorithm()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>784</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+TravelStrategy
+--
+
+--
++travelAlgorithm():void
+--
+Responsibilities
+-- Abstracting a class of 
+algorithm interfaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>287</x>
+      <y>973</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>OnFootStrategy
+--
+
+--
++travelAlgorithm():void
+--
+Responsibilities
+--implements the strategy 
+that travel on foot</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>973</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>TaxiStrategy
+--
+
+--
++travelAlgorithm():void
+--
+Responsibilities
+-- implements the strategy 
+that travel by taxi</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>875</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;80.0;10.0;80.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>875</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>875</y>
+      <w>140</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;180.0;80.0;180.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>819</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+&lt; APPLICATION
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>833</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>56</y>
+      <w>147</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Visitor
+--
+
+--
++visitToy(e:Elemet):void
++visitSnack(e:Elemet):void
++visitFruit(e:Elemet):void
+--
+Responsibilities
+--Design for visitor to call Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>392</y>
+      <w>168</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Element
+--
+
+--
++acceptVisitor(v:Visitor):void
+--
+Responsibilities
+--Design for element to accept visitor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>392</y>
+      <w>168</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>ShoppingStructure
+--
+--trolley:Map
+--
++attachElement(e:Element):void
++detachElement(e:Element):Integer
++acceptVisitor(v:Visitor):void
+--
+Responsibilities
+--data structure</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>91</x>
+      <y>210</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Shopping</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>119</x>
+      <y>119</y>
+      <w>252</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>340.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>119</x>
+      <y>224</y>
+      <w>91</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;310.0;10.0;310.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>245</y>
+      <w>140</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>ConcreteTomy
+--
+
+--
++visitToy(e:Elemet):void
++visitSnack(e:Elemet):void
++visitFruit(e:Elemet):void
+--
+Responsibilities
+--this is customer tomy
+choosing toy and fruit 
+in supermarket</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>245</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>ConcreteSteve
+--
+
+--
++visitToy(e:Elemet):void
++visitSnack(e:Elemet):void
++visitFruit(e:Elemet):void
+--
+Responsibilities
+--this is customer steve
+choosing toy and snack 
+in supermarket</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>518</x>
+      <y>245</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>ConcreteHoli
+--
+
+--
++visitToy(e:Elemet):void
++visitSnack(e:Elemet):void
++visitFruit(e:Elemet):void
+--
+Responsibilities
+--this is customer Holi
+choosing snack and fruit 
+in supermarket
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>70</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>CashierJulia
+--
+
+--
++visitToy(e:Elemet):void
++visitSnack(e:Elemet):void
++visitFruit(e:Elemet):void
+--
+Responsibilities
+--this is cashier Julia
+To provide customers with 
+checkout service
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>189</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;40.0;10.0;40.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>189</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>189</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;190.0;40.0;190.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>259</x>
+      <y>546</y>
+      <w>140</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>ElementDoll
+--
+
+--
++acceptVisitor(v:Visitor):void
+--
+Responsibilities
+--this is doll class 
+when custom choose it
+cashier needs to count it</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>546</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>ElementTomato
+--
+
+--
++acceptVisitor(v:Visitor):void
+--
+Responsibilities
+--this is doll class 
+when custom choose it
+server need to weigh it's weight</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>546</y>
+      <w>140</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>ElementHotStrip
+--
+
+--
++acceptVisitor(v:Visitor):void
+--
+Responsibilities
+--this is hot strip class
+when custom choose it 
+cashier needs to judge does it 
+bulked or packed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>483</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;60.0;10.0;60.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>483</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>483</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;190.0;50.0;190.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>434</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>497</x>
+      <y>119</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>1400</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/BusState/
+--
+#context:Context
+--
++setContext(c:Context):void
+--
+Responsibilities
+-- explain bus state
+provide setup interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>1358</y>
+      <w>189</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Context
+--
+run:RunningState
+stop:StoppingState
+close:ClosingState
+open:OpeningState
+busState:BusState
+--
++getBusState():ComputerState
++setBusState(b:BusState):void
++run():void
++stop():void
++close():void
++open():void
+--
+Responsibilities
+-- define bus' working state</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>1442</y>
+      <w>189</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+&lt; BECOME
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>1533</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>OpenningState
+--
+
+--
++run():void
++stop():void
++close():void
++open():void
+--
+Responsibilities
+--when bus opened it can close</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>1386</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>StoppingState
+--
+
+--
++run():void
++stop():void
++close():void
++open():void
+--
+Responsibilities
+--when bus stoped it can 
+run / open / close</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>1246</y>
+      <w>154</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>RunningState
+--
+
+--
++run():void
++stop():void
++close():void
++open():void
+--
+Responsibilities
+--when bus run it can stop</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>1540</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>ClosingState
+--
+
+--
++run():void
++stop():void
++close():void
++open():void
+--
+Responsibilities
+--when bus closed
+it can run / open</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>1491</y>
+      <w>133</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;170.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>1295</y>
+      <w>133</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>1442</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>1491</y>
+      <w>35</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>329</x>
+      <y>1379</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>this.context=c;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>1393</y>
+      <w>63</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>1288</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>TakeBus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>1288</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>1288</y>
+      <w>133</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;160.0;170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>1806</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Subject/
+--
+
+--
+/+attach(a:Observer):boolean/
+/+detach(d:Observer):boolean/
+/+notify():void/
+--
+Responsibilities
+-- generalization 
+registration, delete, notice</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>1890</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Observer
+--
+
+--
++update(s:Subject):void
+--
+Responsibilities
+-- Provide element to 
+inform the observer of 
+the message</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>2072</y>
+      <w>154</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Server/
+--
+/-state:String/
+--
+/+setState(s:String):void/
+/+getState():String/
+--
+Responsibilities
+-- Generalized observer continuity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>1848</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Cameras
+--
+
+--
++update(s:Subject):void
+--
+Responsibilities
+-- Video surveillance</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>1988</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Laser
+--
+
+--
++update(s:Subject):void
+--
+Responsibilities
+-- Object detection</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>2016</y>
+      <w>147</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BankSafe
+--
+-state:String
+-observers:List
+--
++attach(a:Observer):boolean
++detach(d:Observer):boolean
++notify():void
+--
+Responsibilities
+-- The safe of the bank is 
+the important place to store 
+the valuables for 
+the bank customers.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>2114</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Pressure
+--
+
+--
++update(s:Subject):void
+--
+Responsibilities
+-- Touch detection</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>1883</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;80.0;40.0;80.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>1932</y>
+      <w>147</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;60.0;10.0;60.0;130.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>1932</y>
+      <w>147</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;80.0;10.0;80.0;310.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>1911</y>
+      <w>147</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;310.0;140.0;310.0;140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>2051</y>
+      <w>147</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;110.0;120.0;110.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>2121</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;100.0;10.0;100.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>1918</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>784</x>
+      <y>0</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>No.23
+fontsize=17
+Visitor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>805</x>
+      <y>735</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.22
+fontsize=17
+Strategy</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>791</x>
+      <y>1169</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.21
+fontsize=17
+State</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>791</x>
+      <y>1757</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>No.20
+fontsize=17
+Observer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>1883</y>
+      <w>140</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>1862</y>
+      <w>140</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;240.0;180.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>1841</y>
+      <w>140</w>
+      <h>329</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;450.0;180.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>707</x>
+      <y>238</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>访问者
+将访问方法实现</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>196</x>
+      <y>35</y>
+      <w>98</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>访问者的接口
+制定访问的方法
+如果方法增加
+所有实现都需要分别实现</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>252</y>
+      <w>63</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;60.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>63</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>623</x>
+      <y>462</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>元素
+接受访问者</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>504</y>
+      <w>63</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>133</x>
+      <y>532</y>
+      <w>98</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>数据结构
+如果数据结构发生改变，则访问者方法的变动就
+不可避免</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>483</y>
+      <w>77</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;70.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>651</x>
+      <y>784</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>策略接口
+用于指定被封装的旅行算法</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>798</y>
+      <w>77</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>651</x>
+      <y>868</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>旅行策略的具体实现
+内部封装旅行的具体算法</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>910</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>126</x>
+      <y>1008</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>旅行算法的接口
+聚合成了人们的出行</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>875</y>
+      <w>21</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>329</x>
+      <y>1323</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>公交车状态的抽象类
+带有公交车状态环境属性</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>1358</y>
+      <w>63</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>504</x>
+      <y>1204</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>公交车状态具体实现
+指定在自身状态下，
+转换为下一状态会发生什么。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>1225</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>175</x>
+      <y>1596</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>公交车工作环境
+公交车的所有状态聚合成了公交车运行环境</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>1533</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>735</x>
+      <y>2198</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>观察者的抽象</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>735</x>
+      <y>2016</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>观察者接口
+提供一个更新观察者状态的接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>133</x>
+      <y>1918</y>
+      <w>63</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>2205</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>1995</y>
+      <w>49</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>2163</y>
+      <w>49</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>511</x>
+      <y>2240</y>
+      <w>112</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>观察者的具体实现
+例如：更新的内容符合某个规则时触发某事件</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>231</x>
+      <y>2184</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>事物的实现
+内部需能接纳、排除、通知观察者</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>2149</y>
+      <w>63</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>98</x>
+      <y>1960</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>事物抽象
+事物调用观察者更新接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>1813</y>
+      <w>483</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>670.0;110.0;670.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

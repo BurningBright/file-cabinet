@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>224</y>
+      <w>184</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.action::RegistAction
+--
+-user: String
+-pass: String
+-email: String
+-vercode: String
+--
++execute(): String
++setUser(String user): void
++getUser(): String
++setPass(String pass): void
++getPass(): String
++setEmail(String email): void
++getEmail(): String
++setVercode(String vercode): void
++getVercode(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>144</y>
+      <w>144</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.model::User
+--
+-id: int
+-user: String
+-pass: String
+-email: String
+--
++getId(): int
++setId(int id): void
++getUser(): String
++setUser(String user): void
++getPass(): String
++setPass(String pass): void
++getEmail(): String
++setEmail(String email): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>928</x>
+      <y>224</y>
+      <w>184</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.action::LoginAction
+--
+-user: String
+-pass: String
+-vercode: String
+--
++execute(): String
++setUser(String user): void
++getUser(): String
++setPass(String pass): void
++getPass(): String
++setVercode(String vercode): void
++getVercode(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>224</y>
+      <w>200</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.action::ValidateNameAction
+--
+-user: String
+-tip: String
+-mgr: UserManager
+--
++setMgr(UserManager mgr): void
++execute(): String
++setUser(String user): void
++getUser(): String
++setTip(String tip): void
++getTip(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>384</y>
+      <w>304</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+org.yeeku.dao::UserDao
+--
+--
+~get(int id): User
+~save(User user): void
+~update(User user): void
+~delete(int id): void
+~delete(User user): void
+~findAll(): List&lt;User&gt;
+~findUserByNameAndPass(String user, String pass): User
+~findUserByName(String user): User
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>632</y>
+      <w>304</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.dao.hibernate::UserDaoHibernate
+--
+--
++delete(int id): void
++delete(User user): void
++findAll(): List&lt;User&gt;
++findUserByName(String user): User
++findUserByNameAndPass(String user, String pass): User
++get(int id): User
++save(User user): void
++update(User user): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>640</y>
+      <w>272</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.service.impl::UserManagerImpl
+--
+-userDao: UserDao
+--
++setUserDao(UserDao userDao): void
++addUser(String user, String pass, String email): int
++loginValid(String user, String pass): int
++validateName(String user): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>8</y>
+      <w>392</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.web::AuthImg
+--
+-mFont = new Font("Arial Black", Font.PLAIN, 16): Font
+--
++init(): void
+~getRandColor(int fc, int bc): Color
++service(HttpServletRequest request, HttpServletResponse response): void
+-getRandomChar(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>440</y>
+      <w>272</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+org.yeeku.service::UserManager
+--
+--
+~addUser(String user, String pass, String email): int
+~loginValid(String user, String pass): int
+~validateName(String user): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>8</y>
+      <w>184</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>org.yeeku.action.base::BaseAction
+--
+#mgr: UserManager
+--
++setMgr(UserManager mgr): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>544</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>528</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>72</y>
+      <w>24</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>72</y>
+      <w>184</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>72</y>
+      <w>200</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+</diagram>

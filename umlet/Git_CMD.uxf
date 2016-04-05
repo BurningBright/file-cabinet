@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>297</x>
+      <y>165</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>187</y>
+      <w>33</w>
+      <h>1166</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1040.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>517</x>
+      <y>165</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>Index/Stage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>187</y>
+      <w>33</w>
+      <h>1166</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1040.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>737</x>
+      <y>165</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>WorkSpace</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>781</x>
+      <y>187</y>
+      <w>33</w>
+      <h>1166</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1040.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>77</x>
+      <y>165</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>remote</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>187</y>
+      <w>33</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>77</x>
+      <y>0</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+all effect</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>484</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git add &lt;files ...&gt;
+group=1</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>517</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git commit -m"..."
+group=1</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>550</y>
+      <w>473</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git commit -a
+group=1</panel_attributes>
+    <additional_attributes>10.0;20.0;410.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>583</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git rm &lt;files ...&gt;
+group=1</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>682</y>
+      <w>209</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git reset 
+--soft &lt;hash&gt; v
+group=2</panel_attributes>
+    <additional_attributes>10.0;50.0;70.0;50.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>847</y>
+      <w>253</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git reset [hash]
+-- &lt;files...&gt; &gt;
+group=2</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>759</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git reset &lt;hash&gt; &gt;
+group=2</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>1122</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+&lt; git diff &gt;
+group=3</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>803</y>
+      <w>473</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+git reset --hard &lt;hash&gt; &gt;
+group=2</panel_attributes>
+    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>1166</y>
+      <w>473</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+&lt; git diff &lt;hash&gt; &gt;
+group=3</panel_attributes>
+    <additional_attributes>410.0;10.0;380.0;30.0;40.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>242</y>
+      <w>473</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git init
+group=4</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;30.0;370.0;30.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>264</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git clone &gt;
+group=4</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>11</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>77</x>
+      <y>44</y>
+      <w>176</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+no merge effect
+no cover effect</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>77</x>
+      <y>88</y>
+      <w>176</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+merge effect
+cover effect</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>55</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>99</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>935</y>
+      <w>253</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git checkout [branch]
+-- &lt;files...&gt; &gt;
+group=3</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>979</y>
+      <w>473</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git checkout &lt;hash&gt; --file &lt;files...&gt; &gt;
+group=3</panel_attributes>
+    <additional_attributes>410.0;10.0;380.0;30.0;40.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>1034</y>
+      <w>473</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+git checkout &lt;branch&gt; &gt;
+group=3</panel_attributes>
+    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>1078</y>
+      <w>473</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+&lt; git checkout &gt;
+group=3</panel_attributes>
+    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>99</x>
+      <y>957</y>
+      <w>176</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Note..
+[校验、检出]
+&lt;hash&gt;为可选项，
+若默认则相当于
+检出当前分支Stage。
+
+customelement=
+drawArc(width-25,5,10,50,50,80,false) fg=red bg=red //Parameters (x, y, width, height, start, extent, open)
+drawCircle(width-20,40,3) fg=red bg=red //Parameters (x, y, radius)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>77</x>
+      <y>231</y>
+      <w>770</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Begining
+layer=-1
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>924</y>
+      <w>561</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>Check
+layer=-1
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>473</y>
+      <w>561</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>Snapshot
+layer=-1
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>286</x>
+      <y>660</y>
+      <w>561</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>History
+layer=-1
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>77</x>
+      <y>1188</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>remote</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>1210</y>
+      <w>33</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>99</x>
+      <y>737</y>
+      <w>176</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Note..
+reset soft/mix/hard
+分别对应不同的重置
+级别：soft-HEAD指针
+          mix-快照、缓存区
+          hard-全部重置
+
+
+
+customelement=
+drawArc(width-25,5,10,50,50,80,false) fg=red bg=red //Parameters (x, y, width, height, start, extent, open)
+drawCircle(width-20,40,3) fg=red bg=red //Parameters (x, y, radius)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>308</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+git fetch origin master:partial &gt;
+group=4</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>385</y>
+      <w>693</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+git pull &gt;
+group=4</panel_attributes>
+    <additional_attributes>610.0;10.0;570.0;30.0;250.0;30.0;210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>352</y>
+      <w>473</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+git merge &gt;
+group=4</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;30.0;370.0;30.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>121</x>
+      <y>1265</y>
+      <w>253</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt; git push origin master</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+</diagram>

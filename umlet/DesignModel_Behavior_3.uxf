@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>861</x>
+      <y>0</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>No.15
+fontsize=17
+Chain of Responsibility</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>119</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Handle
+--
+
+--
++operator():void
+--
+Responsibilities
+-- Provde handle interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>119</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/AbstractHandle/
+--
+-handle:Handle
+--
++getHandle():Handle
++setHandle(h:Handle):void
+--
+Responsibilities
+-- Generalization Java Bean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>364</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>FirstHandle
+--
+
+--
++operator():void
+--
+Responsibilities
+-- Implement Java Bean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>364</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>SecondHandle
+--
+
+--
++operator():void
+--
+Responsibilities
+-- Implement Java Bean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>364</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>ThirdHandle
+--
+
+--
++operator():void
+--
+Responsibilities
+-- Implement Java Bean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>364</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Client</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>196</y>
+      <w>322</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;440.0;150.0;440.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>161</y>
+      <w>161</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>196</y>
+      <w>140</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;180.0;130.0;180.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>196</y>
+      <w>518</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0;720.0;170.0;720.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>217</y>
+      <w>21</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>217</y>
+      <w>147</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;190.0;90.0;190.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>217</y>
+      <w>140</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;90.0;10.0;90.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>378</y>
+      <w>259</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;130.0;350.0;170.0;10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>147</x>
+      <y>378</y>
+      <w>462</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>640.0;130.0;640.0;190.0;10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>378</y>
+      <w>665</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>930.0;130.0;930.0;210.0;10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>861</x>
+      <y>665</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>No.14
+fontsize=17
+Template Method</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>861</x>
+      <y>1274</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>No.13
+fontsize=17
+Interpreter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>777</y>
+      <w>168</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/AbstractMobile/
+--
+-weight:Integer
+-size:Integer
+...
+--
++getWeight():Integer
++setWeight(w:Integer):void
++getSize():void
++setSize(s:Integer):void
+/+speak():void/
+/+message():void/
+...
+--
+Responsibilities
+-- Generalization a mobile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>1036</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>HuaWei
+--
+
+--
++speak():void
++message():void
+...
+--
+Responsibilities
+-- Implement HuaWei Mobile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>1036</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Apple
+--
+
+--
++speak():void
++message():void
+...
+--
+Responsibilities
+-- Implement Apple Mobile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>1036</y>
+      <w>168</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Nokia
+--
+
+--
++speak():void
++message():void
+...
+--
+Responsibilities
+-- Implement Nolia Mobile</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>854</y>
+      <w>196</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;10.0;260.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>952</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>203</x>
+      <y>861</y>
+      <w>210</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>154</x>
+      <y>1442</y>
+      <w>168</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Comtext
+--
+-num1:Integer
+-num2:Integer
+...
+--
++getNum1():Integer
++setNum1(n1:Integer):void
++getNum2():void
++setNum2(n2:Integer):void
+...
+--
+Responsibilities
+-- Define expression 
+calculation context</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>1442</y>
+      <w>168</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Expression
+--
+
+--
++interpret(c:Comtext):Integer
+--
+Responsibilities
+-- a String input interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>1715</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Client</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>1652</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Plus
+--
+
+--
++interpret(c:Comtext):Integer
+--
+Responsibilities
+-- Interpret a String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>1526</y>
+      <w>175</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>1526</y>
+      <w>21</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>1526</y>
+      <w>175</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>1652</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Minus
+--
+
+--
++interpret(c:Comtext):Integer
+--
+Responsibilities
+-- Interpret a String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>1652</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Multiply
+--
+
+--
++interpret(c:Comtext):Integer
+--
+Responsibilities
+-- Interpret a String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>1463</y>
+      <w>182</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*
+&lt; CALCULATION</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>1729</y>
+      <w>546</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>760.0;10.0;760.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>1729</y>
+      <w>168</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;170.0;10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>1729</y>
+      <w>357</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>490.0;10.0;490.0;150.0;10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>1596</y>
+      <w>21</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>84</x>
+      <y>287</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>主程序创建所有句柄，设置责任链，调起第一个句柄</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>329</y>
+      <w>49</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>413</x>
+      <y>203</y>
+      <w>70</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>抽象句柄</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>210</x>
+      <y>413</y>
+      <w>70</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>具体句柄</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>399</y>
+      <w>42</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;40.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>189</y>
+      <w>42</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>105</x>
+      <y>203</y>
+      <w>70</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>句柄接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>182</y>
+      <w>42</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>294</x>
+      <y>742</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>抽象方法存在的意义</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>329</x>
+      <y>770</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>686</x>
+      <y>1400</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>表达式接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>644</x>
+      <y>1428</y>
+      <w>56</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>350</x>
+      <y>1540</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>运行上下文</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>756</x>
+      <y>1582</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>具体表达式运行</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>777</x>
+      <y>1610</y>
+      <w>42</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>1519</y>
+      <w>49</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;60.0</additional_attributes>
+  </element>
+</diagram>

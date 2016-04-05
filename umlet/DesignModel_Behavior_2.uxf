@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>0</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.19
+fontsize=17
+Memento
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>228</x>
+      <y>120</y>
+      <w>126</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Originator
+--
+-state:String
+--
++createMemento():Memento
++getState():String
++setState(s:String):void
++restoreToMemento():void
+--
+Responsibilities
+-- Main body backup</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>120</y>
+      <w>126</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Memento
+--
+-state:String
+--
++getState():String
++setState(s:String):void
+--
+Responsibilities
+-- memorandum</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>120</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>CareTaker
+--
+-menento:List
+--
+getMenento():Menento
+setMenento(m:Menento):void
+--
+Responsibilities
+-- memorandum book</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>156</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>150</y>
+      <w>96</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=*
+PUT IN &gt;</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>186</x>
+      <y>30</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>备忘主体</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>390</x>
+      <y>30</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>备忘记录</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>582</x>
+      <y>30</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>备忘录</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>222</x>
+      <y>66</y>
+      <w>60</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>80.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>426</x>
+      <y>66</y>
+      <w>54</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>66</y>
+      <w>66</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>90.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>288</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.18
+fontsize=17
+Medator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>360</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Student/
+--
+
+--
+/+send(s:Student , m:String):void/
+/+accept(s:String):void/
+--
+Responsibilities
+-- abstract student's action</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>222</x>
+      <y>366</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Mediator/
+--
+/-student:List/
+--
++register(name : Student):void
+/+operation(name:Student, s:String):void/
+--
+Responsibilities
+-- provide confession sevice</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>222</x>
+      <y>588</y>
+      <w>150</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TSM
+--
+
+--
++operation(name:Student, s:String):void
+--
+Responsibilities
+-- provide confession sevice</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>582</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Sophia
+--
+
+--
++send(s:Student , m:String):void
++accept(s:String):void
+--
+Responsibilities
+-- Prepare for confession</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>672</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Diana
+--
+
+--
++send(s:Student , m:String):void
++accept(s:String):void
+--
+Responsibilities
+-- Prepare for confession</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>492</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Allen
+--
+
+--
++send(s:Student , m:String):void
++accept(s:String):void
+--
+Responsibilities
+-- Prepare for confession</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>450</y>
+      <w>18</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>402</y>
+      <w>90</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0;130.0;220.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>426</y>
+      <w>138</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0;210.0;480.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>414</y>
+      <w>114</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;350.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>528</y>
+      <w>174</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;130.0;10.0;130.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>618</y>
+      <w>174</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>630</y>
+      <w>174</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;130.0;130.0;130.0;130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>732</x>
+      <y>840</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.17
+fontsize=17
+Iterator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>156</x>
+      <y>528</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>具体中介者，协调各个同学，了解并维护各个调用</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>150</x>
+      <y>306</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>中介定义一个接口用于和同学通信</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>438</x>
+      <y>306</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>抽象学生类，定义公有方法</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>432</x>
+      <y>438</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>具体同学类，无需了解其他同学，通信通过TSM</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>474</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>342</y>
+      <w>66</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>564</y>
+      <w>48</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>342</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>924</y>
+      <w>150</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Iterator
+--
+
+--
++hasNext():boolean
++next():E
++isEmpty():boolean
+--
+Responsibilities
+-- Provde iterator interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>1092</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ParkingIterator
+--
+-current:Integer
+--
++hasNext():boolean
++next():Car
++isEmpty():boolean
+--
+Responsibilities
+-- For parking/fetching Car</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>1014</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>924</y>
+      <w>150</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Park
+--
+
+--
++park(c:Car):boolean
++fetch(i:String):Car
+--
+Responsibilities
+-- Provde park interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>1092</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ParkingPlace
+--
+#capacity:Integer
+#car[]:Car
+--
++park(c:Car):boolean
++fetch(i:String):Car
++charge():void
++createIterator():ParkingIterator
+--
+Responsibilities
+-- Automatic lift parking lot</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>1014</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>1134</y>
+      <w>246</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>438</x>
+      <y>960</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>ParkingMain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>960</y>
+      <w>108</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>960</y>
+      <w>102</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>1146</y>
+      <w>246</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;390.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>732</x>
+      <y>1308</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>No.16
+fontsize=17
+Command
+(Composite)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>492</x>
+      <y>1050</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>降装置的主控程序、后台程序</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>1080</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>126</x>
+      <y>1044</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>停车场管理界面、数据库</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>900</y>
+      <w>48</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>60.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>1074</y>
+      <w>54</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>126</x>
+      <y>870</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>停车场抽象意义上的接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>906</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>486</x>
+      <y>876</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>升降装置抽象意义上的接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>366</x>
+      <y>396</y>
+      <w>174</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>438</x>
+      <y>1422</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Command
+--
+
+--
++addCommand(c:Command):void
++removeCommand(c:Command):void
++getCommand(i:Integer):Command
++execute():void
+--
+Responsibilities
+-- Provde command interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>1422</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>InvokerController
+--
+
+--
++addCommand(c:Command):void
++runCommand(c:Command):void
+--
+Responsibilities
+-- drive things running</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>1452</y>
+      <w>162</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*
+&lt; COME FROM</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>1680</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>CommandTakeOff
+--
+
+--
++addCommand(c:Command):void
++removeCommand(c:Command):void
++getCommand(i:Integer):Command
++execute():void
+--
+Responsibilities
+-- Take clothes off</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>1680</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>CommandWear
+--
+
+--
++addCommand(c:Command):void
++removeCommand(c:Command):void
++getCommand(i:Integer):Command
++execute():void
+--
+Responsibilities
+-- Wear clothes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>1620</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>CommandDressing
+--
+commands:List
+--
++addCommand(c:Command):void
++removeCommand(c:Command):void
++getCommand(i:Integer):Command
++execute():void
+--
+Responsibilities
+-- Change clothes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>1524</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>260.0;10.0;260.0;210.0;10.0;210.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>1524</y>
+      <w>18</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>1524</y>
+      <w>168</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;260.0;90.0;260.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>1662</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Client</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>1458</y>
+      <w>222</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+POLYMERZATION
+ v
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>230.0;270.0;230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>1524</y>
+      <w>150</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ReceiverServant
+--
+
+--
++wear():void
++takeOff():void
++dressing():void
+--
+Responsibilities
+-- Take clothes off</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>1482</y>
+      <w>132</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0;200.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>642</x>
+      <y>1758</y>
+      <w>168</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>fontsize=19
+for (Command c: commands) {
+    command.execute();
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>1674</y>
+      <w>72</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>1626</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>1674</y>
+      <w>228</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>360.0;190.0;360.0;300.0;10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>1674</y>
+      <w>414</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>670.0;190.0;670.0;280.0;10.0;280.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>1572</y>
+      <w>84</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>102</x>
+      <y>1674</y>
+      <w>540</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>880.0;90.0;880.0;260.0;10.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>1566</y>
+      <w>162</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>168</x>
+      <y>1662</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>命令对象</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>168</x>
+      <y>1512</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>命令执行者</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>54</x>
+      <y>1410</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>命令者</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>1542</y>
+      <w>66</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>1440</y>
+      <w>66</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>1692</y>
+      <w>66</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>348</x>
+      <y>1362</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>命令接口</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>1392</y>
+      <w>66</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;90.0</additional_attributes>
+  </element>
+</diagram>

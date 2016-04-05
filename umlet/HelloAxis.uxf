@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>150</y>
+      <w>340</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>service::HelloWorldWebService
+--
+-ctx: ApplicationContext
+--
++getServiceObject(AxisService axisService): Object
++setApplicationContext(ApplicationContext ctx): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>150</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+service::HelloWorld
+--
+--
+~sayHi(String text): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>270</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>client::SayHi1
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>270</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>client::SayHi2
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>350</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>service::HelloWorldImpl
+--
+--
++sayHi(String text): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>350</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>client::HelloWorldTest
+--
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>230</y>
+      <w>60</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;120.0</additional_attributes>
+  </element>
+</diagram>
