@@ -20,3 +20,10 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.last 'log -1'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+//分支切换、新建，远程获取、合并【多人写作时最好使用fetch&merger】
+git fectch origin master:shit
+git checkout shit
+git merge
+git branch -d shit
+
+git pull origin master
