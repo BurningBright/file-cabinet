@@ -34,11 +34,28 @@ git rm --cached xxx
 git rm -f xxx
 
 /*
-*保存当前工作，当有紧急工作时，又不想commit现在做一半的工作，
-*就用git stash，然后就可以切换到其他分支进行紧急工作。
+*  保存当前工作，当有紧急工作时，又不想commit现在做一半的工作，
+*  就用git stash，然后就可以切换到其他分支进行紧急工作。
 */
 git help stash
 git stash
 git stash pop
 git stash pop stash@{num}
 git stash clear
+
+//日志展现形式
+git log --graph
+git log --online
+git log --graph --online --all
+
+//比对本地库/本地缓存
+git reset --soft c175f5e
+git diff HEAD
+git diff c175f5e
+
+git reset --mix c175f5e
+git diff
+
+//对最近的commit做修改
+git commit --amend -m"xxx"
+git push <remote> <branch> --force
