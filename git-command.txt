@@ -27,3 +27,18 @@ git merge
 git branch -d shit
 
 git pull origin master
+
+//缓存中移除/同时移除
+git add .
+git rm --cached xxx
+git rm -f xxx
+
+/*
+*保存当前工作，当有紧急工作时，又不想commit现在做一半的工作，
+*就用git stash，然后就可以切换到其他分支进行紧急工作。
+*/
+git help stash
+git stash
+git stash pop
+git stash pop stash@{num}
+git stash clear
