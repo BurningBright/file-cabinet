@@ -8,7 +8,7 @@ cp		复制文件	cp /tmp/20150325/DataExchange.war ./
 mkdir	建文件夹	mkdir 20150325
 sh		执行文件	sh ../bin/startup.sh
 df 		查看文件、文件夹情况	-h 人类可读
-du		用量
+du		用量		du -h --max-depth=2 最大深度
 uniq	选出唯一的列表
 alias target='original ...'	给命令取个别名
 

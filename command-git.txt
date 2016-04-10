@@ -10,6 +10,7 @@ git remote remove origin
 git remote add origin git@github.com:BurningBright/filecabinet.git
 
 git push -u origin master
+git push -f //强力推送
 
 //设置 ~/.gitconfig配置下的别名【本地仓库下/.git/config】【安装目录下/etc/config】
 git config --global alias.st status
@@ -59,3 +60,10 @@ git diff
 //对最近的commit做修改
 git commit --amend -m"xxx"
 git push <remote> <branch> --force
+
+//重新整理commit
+git rebase -i c175f5e
+git push -f origin master
+
+//重新整理压缩空间
+git gc --prune=now
