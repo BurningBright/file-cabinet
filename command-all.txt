@@ -42,14 +42,6 @@ curl -d 'card_code=2150999999990034' http://app.unservice.net:3001/api/recharge_
 rsync -avzP TransferBack.war 122.224.81.254:/usr/local/tomcat/tfb_test
 
 
-
-【GIT命令】
-git config --global user.name "BuringBright"
-git config --global user.email "lcg51271@gmail.com"
-git rm --cached
-
-
-
 【oracle命令】
 EXP_FULL_DATABASE
 IMP_FULL_DATABASE
@@ -72,96 +64,6 @@ select to_char(sysdate,'yyyy-mm-dd') today from dual;
 exit
 EOF
 
-
-【mysql命名】
-mysql -u name -p password -h host
-mysql -u root
-show databases
-use lcg;
-show tables;
-create datatbase tfb default character set utf8;
-create user 'tfb'@'%' identified by 'tfb'
-grant all privileges on tfb.* to 'tfb'@'%' identified by 'tfb';
-flush privileges;
-
-mysqldump -u 用户名 -p 数据库名 > 导出的文件名
-source [address]
-
-
-str_to_date('30-09-2015 23:57:00','%d-%m-%Y %H:%i:%S')
-date_format(date,'%Y-%m-%d')    -------------->oracle中的to_char();
-str_to_date(date,'%Y-%m-%d')     -------------->oracle中的to_date();
-
-【mysql事件函数】
-CREATE EVENT order_create ON SCHEDULE EVERY 1 DAY 
-STARTS '2016-01-14 00:00:00'  ON COMPLETION NOT PRESERVE ENABLE 
-DO call create_order_table()
-
-
-【mysql存储过程】
-CREATE PROCEDURE create_order_table()
-BEGIN
-DECLARE t_name VARCHAR(50);
-SET t_name=REPLACE(CURRENT_DATE(), "-","");
-
-SET @STMT:=CONCAT("CREATE TABLE uls_order_", t_name, "
-(
-  `card_number` varchar(60) NOT NULL,
-  `state` varchar(1) NOT NULL,
-  PRIMARY KEY (`sys_code`,`order_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;")
-;
-
-PREPARE STMT FROM @STMT;
-EXECUTE STMT;
-END
-
-CREATE PROCEDURE create_refund_view()
-BEGIN
-	DECLARE t_sql VARCHAR(500);
-	DECLARE v_name VARCHAR(50);
-	DECLARE flag INTEGER;
-	DECLARE t_from INTEGER;
-	DECLARE t_to INTEGER;
-	
-	SET t_sql="CREATE OR REPLACE VIEW uls_refund_view AS ";
-	SET flag=0;
-	-- 准备的退款视图在下一天退款，即会成为T-3、T-2
-	SET t_from=2;
-	SET t_to=1;
-	
-	WHILE t_to<=t_from do
-		-- 组合表名
-		SET v_name=CONCAT("uls_order_", REPLACE(DATE(DATE_SUB(now(), INTERVAL t_to DAY)), "-",""));
-		
-		-- 检测表名
-		SET @ret=CONCAT("SELECT TABLE_NAME into v_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='tfb' AND TABLE_NAME='",v_name,"';");
-		select @ret;
-
-		if LENGTH(v_name)>0 THEN
-			SET flag=1;
-			-- 加入视图
-			set t_sql=CONCAT(t_sql, "SELECT * FROM ", v_name);
-			IF t_to!=t_from THEN
-				set t_sql=CONCAT(t_sql, " union all ");
-			ELSE
-			-- 若到末尾加封号
-				set t_sql=CONCAT(t_sql, ";");
-			END IF;
-		END IF;
-		
-		set t_to=t_to+1;
-	END WHILE;
-	
-	-- 如果不存在表，添加默认表
-	IF flag=0 THEN
-		SET t_sql=CONCAT(t_sql, "SELECT * FROM uls_order;");
-	END IF;
-	SET @STMT:=t_sql;
-	PREPARE STMT FROM @STMT;   
-	EXECUTE STMT;
-	
-END
 
 
 【windows service 命令】
@@ -225,6 +127,18 @@ a(jquery);
 
 jQuery(document).ready(function(){ });
 
+//时间插件-中文
+$("#TSMGRAM_REALCA_1_birthday").datepicker({
+	inline:false,
+	dateFormat: "yy-mm-dd",
+	dayNames: [ "星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+	dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+	monthNamesShort: [ "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月" ]
+});
+
+//验证
+if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
+
 
 
 【java编译命令】
@@ -236,13 +150,19 @@ jQuery(document).ready(function(){ });
 【regex正则表达】
 --格式化单行xml格式报文
 (?<=>)(?=<(?!\/))
+
 --找到前是linux换行，后不是'320500'的光标
 \n(?!320500)
+
 --找到后不是'create'的windows换行。即\r\n(?!create)
 (?!(\r\ncreate))\r\n
+
 --平衡组匹配？？？
 (?'Open'\()[2-9][0-9]{2}(?'-Open'\))\s?[0-9]{3}-[0-9]{4}(?(Open)(?!))|[2-9][0-9]{2}(-|\.)[0-9]{3}\1[0-9]{4}
 <div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div>
+
+--找非词组空格
+(?<![a-z,A-Z]) | (?![a-z,A-Z])
 
 
 【ssh配置】
@@ -258,3 +178,11 @@ execution(* com.tsm.tfb.dao.reportmpl.*.*(..))
 export JAVA_HOME=/usr/share/jdk1.8.0_20
 export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+
+【windows network】
+netsh wlan set hostednetwork mode=allow ssid=lcg51271 key=88888888 keyUsage=persistent
+netsh wlan start hostednetwork
+
+disallow
+temporary

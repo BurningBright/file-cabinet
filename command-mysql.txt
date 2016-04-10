@@ -1,0 +1,249 @@
+【sql】
+select * from uls_order t where 
+	t.operation_time > date_format(date_sub(sysdate(), INTERVAL 0 DAY), '%Y-%m-%d') 
+	AND t.operation_time < date_format(date_sub(sysdate(), INTERVAL -1 DAY), '%Y-%m-%d');
+
+
+【mysql命名】
+mysql -u name -p password -h host
+mysql -u root
+show databases
+use lcg;
+show tables;
+create datatbase tfb default character set utf8;
+create user 'tfb'@'%' identified by 'tfb'
+//赋权
+grant all privileges on tfb.* to 'tfb'@'%' identified by 'tfb';
+grant all privileges on tfb.* to 'tfb'@'127.0.0.1' identified by 'be2f6o';
+grant all privileges on tfb.* to 'tfb'@'localhost' identified by 'be2f6o';
+grant all privileges on tfb.* to 'tfb'@'10.0.0.14' identified by 'be2f6o';
+
+flush privileges;
+
+mysqldump -u 用户名 -p 数据库名 > 导出的文件名
+source [address]
+
+
+str_to_date('30-09-2015 23:57:00','%d-%m-%Y %H:%i:%S')
+date_format(date,'%Y-%m-%d')     -------------->oracle中的to_char();
+str_to_date(date,'%Y-%m-%d')     -------------->oracle中的to_date();
+
+
+
+【模拟序列】
+-- 1建序列表
+CREATE TABLE dmn_mysequence ( 
+`name` varchar(50) NOT NULL, 
+`current_value` int(11) NOT NULL, 
+`increment` int(11) NOT NULL DEFAULT '1', 
+PRIMARY KEY (`name`) 
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+
+
+-- 2建表
+DROP TABLE IF EXISTS `tas_app`.`tas_music`; 
+CREATE TABLE  `tas_app`.`tas_music` ( 
+`id` int(4) NOT NULL AUTO_INCREMENT, 
+`name` varchar(32) NOT NULL, 
+`icon` varchar(256) NOT NULL DEFAULT '', 
+`url` varchar(256) NOT NULL DEFAULT '', 
+`lyric` varchar(256) NOT NULL DEFAULT '', 
+PRIMARY KEY (`id`) 
+) ENGINE=InnoDB AUTO_INCREMENT=2093 DEFAULT CHARSET=utf8;
+
+
+-- 3序列表里插入如下记录 
+insert into tas_app.dmn_mysequence values('music',23,1); 
+
+-- 4创建nextval function: 
+DELIMITER $$ 
+DROP FUNCTION IF EXISTS `nextval` $$ 
+CREATE DEFINER=`admin`@`%` FUNCTION `nextval`(seq_name VARCHAR(50)) RETURNS int(11) 
+BEGIN 
+UPDATE dmn_mysequence 
+SET current_value = current_value + increment 
+WHERE name = seq_name; 
+RETURN currval(seq_name); 
+END $$ 
+DELIMITER ; 
+
+-- 5创建setval function: 
+DELIMITER $$ 
+DROP FUNCTION IF EXISTS `setval` $$ 
+CREATE DEFINER=`admin`@`%` FUNCTION `setval`(seq_name VARCHAR(50), value INTEGER) RETURNS int(11) 
+BEGIN 
+UPDATE dmn_mysequence  
+SET current_value = value 
+WHERE name = seq_name; 
+RETURN currval(seq_name); 
+END $$ 
+DELIMITER ; 
+
+-- 6创建currval function: 
+DELIMITER $$ 
+DROP FUNCTION IF EXISTS `currval` $$ 
+CREATE DEFINER=`admin`@`%` FUNCTION `currval`(seq_name VARCHAR(50)) RETURNS int(11) 
+BEGIN 
+  DECLARE value INTEGER; 
+  SET value = 0; 
+  SELECT current_value INTO value 
+  FROM dmn_mysequence 
+  WHERE name = seq_name; 
+  RETURN value; 
+END $$ 
+DELIMITER ; 
+
+-- 7创建触发器 
+DELIMITER $$ 
+drop trigger if exists tas_music_trigger $$ 
+create trigger tas_music_trigger before insert on tas_music 
+for each row begin 
+if new.id is null or new.id = '' or new.id = 0 THEN 
+  set new.id = nextval('music'); 
+end if; 
+end $$ 
+DELIMITER ; 
+
+
+
+【mysql存储过程&计划任务&事件】
+CREATE EVENT order_create ON SCHEDULE EVERY 1 DAY 
+STARTS '2016-01-14 23:55:00'  ON COMPLETION NOT PRESERVE ENABLE 
+DO call create_order_table();
+
+CREATE EVENT order_view_create ON SCHEDULE EVERY 1 DAY 
+STARTS '2016-01-15 00:00:00'  ON COMPLETION NOT PRESERVE ENABLE 
+DO call create_order_view();
+
+CREATE EVENT refund_view_create ON SCHEDULE EVERY 1 DAY 
+STARTS '2016-01-14 23:55:00'  ON COMPLETION NOT PRESERVE ENABLE 
+DO call create_refund_view();
+
+
+
+CREATE PROCEDURE create_order_table()
+BEGIN
+DECLARE t_name VARCHAR(50);
+SET t_name=REPLACE(CURRENT_DATE(), "-","");
+
+SET @STMT:=CONCAT("CREATE TABLE uls_order_", t_name, "
+(
+  `card_number` varchar(60) NOT NULL,
+  `card_type` varchar(3) DEFAULT NULL,
+  `order_no` varchar(200) NOT NULL,
+  `order_type` varchar(3) DEFAULT NULL,
+  `op_code` varchar(20) NOT NULL,
+  `is_code` varchar(20) NOT NULL,
+  `sys_code` varchar(20) NOT NULL,
+  `card_fee` varchar(20) NOT NULL,
+  `recharge_type` varchar(3) NOT NULL,
+  `recharge_back_flag` varchar(1) DEFAULT NULL,
+  `pay_account` varchar(200) DEFAULT NULL,
+  `payment_code` varchar(20) DEFAULT NULL,
+  `transfer_time` datetime NOT NULL,
+  `operation_time` datetime DEFAULT NULL,
+  `refund_time` datetime DEFAULT NULL,
+  `is_covering` varchar(3) NOT NULL,
+  `is_covered` varchar(3) NOT NULL,
+  `state` varchar(1) NOT NULL,
+  PRIMARY KEY (`sys_code`,`order_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
+
+PREPARE STMT FROM @STMT;
+EXECUTE STMT;
+END
+
+
+CREATE PROCEDURE create_order_view()
+BEGIN
+	DECLARE t_sql VARCHAR(500);
+	DECLARE v_name VARCHAR(50);
+	#DECLARE flag INTEGER;
+	DECLARE t_from INTEGER;
+	DECLARE t_to INTEGER;
+	
+	SET t_sql="CREATE OR REPLACE VIEW uls_order_view AS ";
+	#SET flag=0;
+	-- 准备的订单视图T-1、T
+	SET t_from=1;
+	SET t_to=0;
+	
+	WHILE t_to<=t_from do
+		-- 组合表名
+		SET v_name=CONCAT("uls_order_", REPLACE(DATE(DATE_SUB(now(), INTERVAL t_to DAY)), "-",""));
+		
+		-- 检测表名
+		SET @ret=CONCAT("SELECT TABLE_NAME into v_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='tfb' AND TABLE_NAME='",v_name,"';");
+		select @ret;
+		if LENGTH(v_name)>0 THEN
+			#SET flag=1;
+			-- 加入视图
+			set t_sql=CONCAT(t_sql, "SELECT * FROM ", v_name);
+			IF t_to!=t_from THEN
+				set t_sql=CONCAT(t_sql, " union all ");
+			ELSE
+			-- 若到末尾加封号
+				set t_sql=CONCAT(t_sql, ";");
+			END IF;
+		END IF;
+		
+		set t_to=t_to+1;
+	END WHILE;
+	
+	SET @STMT:=t_sql;
+	PREPARE STMT FROM @STMT;   
+	EXECUTE STMT;
+
+END
+
+
+CREATE PROCEDURE create_refund_view()
+BEGIN
+	DECLARE t_sql VARCHAR(500);
+	DECLARE v_name VARCHAR(50);
+	DECLARE flag INTEGER;
+	DECLARE t_from INTEGER;
+	DECLARE t_to INTEGER;
+	
+	SET t_sql="CREATE OR REPLACE VIEW uls_refund_view AS ";
+	SET flag=0;
+	-- 准备的退款视图在下一天退款，即会成为T-3、T-2
+	SET t_from=2;
+	SET t_to=1;
+	
+	WHILE t_to<=t_from do
+		-- 组合表名
+		SET v_name=CONCAT("uls_order_", REPLACE(DATE(DATE_SUB(now(), INTERVAL t_to DAY)), "-",""));
+		
+		-- 检测表名
+		SET @ret=CONCAT("SELECT TABLE_NAME into v_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='tfb' AND TABLE_NAME='",v_name,"';");
+		select @ret;
+		if LENGTH(v_name)>0 THEN
+			SET flag=1;
+			-- 加入视图
+			set t_sql=CONCAT(t_sql, "SELECT * FROM ", v_name);
+			IF t_to!=t_from THEN
+				set t_sql=CONCAT(t_sql, " union all ");
+			ELSE
+			-- 若到末尾加封号
+				set t_sql=CONCAT(t_sql, ";");
+			END IF;
+		END IF;
+		
+		set t_to=t_to+1;
+	END WHILE;
+	
+	-- 如果不存在表，添加默认表
+	IF flag=0 THEN
+		SET t_sql=CONCAT(t_sql, "SELECT * FROM uls_order;");
+	END IF;
+	
+	SET @STMT:=t_sql;
+	PREPARE STMT FROM @STMT;   
+	EXECUTE STMT;
+	
+END
+
+
+
