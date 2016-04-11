@@ -1,0 +1,36 @@
+#!/bin/bash
+#used to auto create a profile and set it privilege to 744
+
+
+#loop file name from date_01.sh to date_99.sh
+for((i=1; i<100; i++))
+do
+
+	#define the tmp file name
+	var=`date +%Y%m%d`
+
+	#assemble the true file name
+	if((i < 10))
+	then
+		var=$var'_0'$i'.sh'
+	else
+		var=$var'_'$i'.sh'
+	fi
+
+echo $var
+
+	#if the file already exist skip this turn
+	if [ -e $var ]
+	then
+		continue
+	else
+		#create the file and change it's privilege
+		if `touch $var` && `chmod 744 $var`
+		then
+			echo create $var success
+		else
+			echo create $var failed
+		fi
+		break
+	fi
+done

@@ -1,0 +1,30 @@
+#!/bin/bash
+#record file
+
+list=`ls`
+
+for obj in $list
+do
+	exec 3<>113
+	flag=1
+	while read line <&3
+	do
+		tmp=`echo $line | sed -n '/^'$obj'/p'`
+		if [ -n "$tmp" ]
+		then
+			flag=0
+			break
+		fi
+	done
+
+	if [ $flag == 1 ]
+	then
+		echo "Enter $obj's Comments:"
+		if read && [ "$REPLY" != "quit" ]
+		then
+			echo -e "$obj\t$REPLY" >&3
+		else
+			break 2
+		fi
+	fi
+done

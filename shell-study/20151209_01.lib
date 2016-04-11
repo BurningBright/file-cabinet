@@ -1,0 +1,11 @@
+function myPrint() {
+        printf "%-16s\n", $0
+}
+
+function getRandom(lo, hi) {
+        return int(rand() *(hi-lo+1) +lo)
+}
+
+function printThird() {
+        print $3
+}

@@ -1,0 +1,5 @@
+{
+        printThird()
+        myPrint()
+        print getRandom(10, 100)
+}

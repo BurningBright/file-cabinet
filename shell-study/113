@@ -1,0 +1,55 @@
+111	create a today's executable file
+112	to find which file haven't be logged and comment it
+113	the log it's self , record all files usage
+20151022_01.sh	10.1 10.2 10.3 display messages
+20151022_02.sh	10.4 environment variable
+20151022_03.sh	10.4 back quotes using
+20151022_04.sh	10.5 10.6 10.7 redirection & pop
+20151027_01.sh	11.1 11.2 11.3 judge and exit with an error
+20151027_02.sh	11.2 test multiple commands
+20151027_03.sh	11.3 test script's exit code
+20151028_01.sh	11.4 test bc command in float number
+20151029_01.sh	11.4.2 test compare between string.it seem no different
+20151031_01.sh	11.6 the advance feature use double quotes and no transfer
+20151103_01.sh	12.1 the 'for' command and 'IFS' sign to separate arguments
+20151104_01.sh	13.1 13.2.1 basic method to deal user input and calc
+20151104_02.sh	13.2.1 a soft link to 20151104_01.sh,used to point '*' operator
+20151104_03.sh	13.2.2 deal all user input by '$@' and '$*'
+20151104_04.sh	13.3 13.4 'getopt' command to deal user input option
+20151104_05.sh	13.4 'getopts' deal options, it read argument every loop
+20151104_06.sh	13.6 read user input game, terminal operation ineractive
+20151105_01.sh	14.1 14.2 file descriptor standard and error output
+20151105_02.sh	14.3 file descriptor standard input
+20151105_03.sh	14.4.1 14.4.2 14.4.5 exchange output descriptor / close descriptor / add data
+20151105_04.sh	14.4.3 exchange input descriptor
+20151105_05.sh	14.7 14.8 temp file / 3 way output 'TEE'
+log.20151022	the day's file detail
+log.20151105_1	user input / output test file 01
+log.20151105_2	user input / output test file 02
+20151111_01.sh	15.1 control signal / thread status
+20151111_02.sh	15.2 used to test run shell at the background
+nohup.out	15.3 no console run shell's standard output
+20151112_01.sh	16.1 16.2 16.3 function usage
+20151112_02.sh	16.4 about array variable and function
+20151113_01.sh	16.5 function recursive
+20151113_02.lib	16.6 create a function library
+20151113_03.sh	16.6 load library use '.'
+20151114_01.sh	17.1 create a menu in character
+20151114_02.sh	17.2 use select command in menu
+20151118_01.cmd	18.1 first sed command file
+20151125_01.cmd	18.1 first gawk command file
+20151125_02.cmd	18.1 gawk 'BEGIN' & 'END' usage
+20151126_01.cmd	18.2 mix sed file stream operation
+20151126_01.sh	18.2 mix sed execute command
+log.20151118_1	18.1 for sed/gawk operate
+log.20151126_1	18.2 original sql output file
+log.20151126_2	18.2 dealed sql output file
+20151127_01.sh	19.* test these special regular expression
+20151201_01.sh	20.1 test single/multi line mode
+20151202_01.sh	20.2 20.3 20.4 hold space/ negate command/ change stream
+20151203_01.sh	20.5 20.7 replace(group in regex)/ sed pratical tools
+log.20151127_1	19.* regex test sample(america phone number)
+log.20151201_1	20.1 kurt cobain's suicide note be used as a multi line mode test sample
+log.20151201_2	20.2 20.3 20.4 20.5 space/stream's test sample
+log.20151202_1	20.7 the blank line operation's test sample
+log.20151203_1	20.7 the html file operation's test sample
