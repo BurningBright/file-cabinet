@@ -6,6 +6,9 @@ init 0
 power off
 shutdown -h now
 		关机命令
+reboot
+shotdown -r now
+		重启命令
 mount	挂载设备	mount /dev/sda1 /mnt
 cfdisk	格式化磁盘
 lsblk	列出系统块	list system block
@@ -28,6 +31,7 @@ netstat	查看端口
 jar 	打包命令	jar -cvf xxx.war ./*
 tar		打包命令	-czvf 压缩打包 -cvf 仅打包
 		解包命令	-xzvf 解压缩包
+unzip	解包命令	-o master.zip -d protobuf\ 解压，覆盖
 
 cp -s dir_target dir_point		文件链接
 ln -s dir_target dir_point		文件夹链接
@@ -84,12 +88,45 @@ pacman -S grub
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+//开机启动sshd守护
 systemctl enable dhcpcd.service
 exit
 reboot
 
 pacman -S zsh
 pacman -S vim
+
+useradd -m -g users -s /bin/bash leon
+passwd leon
+
+pacman -S sudo
+pacman -S wget
+pacman -S make
+pacman -S unzip
+pacman -S git
+
+unzip -o master.zip
+pacman -S automake
+
+ip route
+ip link
+
+systemctl enable sshd          #开机启动openssh
+	systemctl start sshd       #手动启动openssh
+
+/etc/ssh/sshd_config	port 22
+	#PermitRootLogin yes       #默认也是不允许root帐户直接登录
+
+/etc/hosts.deny                #默认拒绝所有连接
+/etc/hosts.allow               #默认没有任何允许连接,需要手动添加,例:
+
+vi /etc/hosts.allow
+	sshd:192.168.1.100:ALLOW
+
+systemctl restart sshd         #重启openssh
+
+
+
 
 
 【oracle命令】
