@@ -7,7 +7,7 @@ power off
 shutdown -h now
 		关机命令
 reboot
-shotdown -r now
+shutdown -r now
 		重启命令
 mount	挂载设备	mount /dev/sda1 /mnt
 cfdisk	格式化磁盘
@@ -55,34 +55,39 @@ curl -d 'card_code=2150999999990034' http://app.unservice.net:3001/api/recharge_
 rsync -avzP TransferBack.war 122.224.81.254:/usr/local/tomcat/tfb_test
 
 【arch安装】
+// 测试网络
 ping -c 4 www.baidu.com
 	#systemctl enable dhcpcd.service
-	
+
+// 磁盘操作
 lsblk
 cfdisk
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
+
+// 镜像地址优化
 cd /etc/pacman.d/mirrorlist
 grep -A 1 '##.*China' mirrorlist|grep -v '\-\-'> mirrorlist2
 cat mirrorlist>>mirrorlist2
 mv mirrorlist2 mirrorlist
 pacstrap -i /mnt base [base-devel]
 
+// 安装
 genfstab -U -p /mnt>>/mnt/etc/fstab
-arch-chroot /mnt /bin/bash
 
+// 配置
+arch-chroot /mnt /bin/bash
 nano /etc/locale.gen
 	#en_US.UTF-8#zh_CN.UTF-8#zh_TW.UTF-8
 locale-gen
-
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc --utc
-
 echo archlinux >/etc/hostname
 	#<ip-address>    <hostname.domain.org>    <hostname>
 	127.0.0.1    localhost.localdomain    localhost archlinux
 	::1        localhost.localdomain    localhost archlinux
 
+// 引导
 passwd
 pacman -S grub
 grub-install --recheck /dev/sda
@@ -93,12 +98,20 @@ systemctl enable dhcpcd.service
 exit
 reboot
 
-pacman -S zsh
-pacman -S vim
-
+// 用户
 useradd -m -g users -s /bin/bash leon
 passwd leon
+usermod -a -G video,audio,lp,log,wheel,optical,scanner,games,users,storage,power 新用户
+pacman -S polkit
+su root
+chmod 777 /etc/sudoers
+vim /etc/sudoers
+chmod 440 /etc/sudoers
+ls -l /etc/sudoers
 
+
+pacman -S zsh
+pacman -S vim
 pacman -S sudo
 pacman -S wget
 pacman -S make
@@ -124,8 +137,6 @@ vi /etc/hosts.allow
 	sshd:192.168.1.100:ALLOW
 
 systemctl restart sshd         #重启openssh
-
-
 
 
 
