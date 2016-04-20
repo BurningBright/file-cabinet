@@ -54,6 +54,8 @@ ssh-keygen -t rsa -C "lcg51271@gmail.com"
 curl -d 'card_code=2150999999990034' http://app.unservice.net:3001/api/recharge_card
 rsync -avzP TransferBack.war 122.224.81.254:/usr/local/tomcat/tfb_test
 
+
+
 【arch安装】
 // 测试网络
 ping -c 4 www.baidu.com
@@ -139,6 +141,22 @@ vi /etc/hosts.allow
 systemctl restart sshd         #重启openssh
 
 
+【java编译命令】
+javac CommandInput.java -d ../../bin
+java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
+java -classpath xxx.jar x.xx.xxx.class [args]
+
+
+【环境变量】
+%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+
+export JAVA_HOME=/usr/share/jdk1.8.0_20
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+
+
 
 【oracle命令】
 EXP_FULL_DATABASE
@@ -164,139 +182,9 @@ EOF
 
 
 
-【windows service 命令】
-sc create FilesWatcherInWindows binpath= "C:\Documents and Settings\FilesWatcherInWindows.exe"
-
-YourEXE.exe /Service
-net start YourEXE.exe
-YourEXE.exe /UnregServer
-
-
-【windows bat 命令】
-@echo off / echo hello world
---'dir  /ab/b url' url目录下
---'dir	/s/b url' url递归下
-for /f "delims=" %%a in ('dir /s/b C:\Users\Chen\Desktop\a\*.txt') do (
-REM echo %cd%\%%a
-move /y "%%a" "C:\Users\Chen\Desktop\a\"
-)
-pause
-
-
-查看文件MD5
-certutil -hashfile yourfilename.ext MD5
-certutil -hashfile yourfilename.ext SHA1
-certutil -hashfile yourfilename.ext SHA256
-
-
-Windows Registry Editor Version 5.00
-[HKEY_CLASSES_ROOT\*\Shell\NotePad++]
-[HKEY_CLASSES_ROOT\*\Shell\NotePad++\Command]
-@="\"D:\\Program Files\\Notepad++\\notepad++.exe\" \"%1\""
-
-
-@echo off / echo hello world
-for /f "delims=" %%a in ('dir /s/b C:\Users\Chen\Desktop\a\*.txt') do (
-REM echo %cd%\%%a
-move /y "%%a" "C:\Users\Chen\Desktop\a\"
-)
-pause
-
-
-set path=%path%;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\VC98\BIN;C:\Program Files\Microsoft Visual Studio\Common\TOOLS;C:\Program Files\Microsoft Visual Studio\Common\TOOLS\WINNT
-set include=C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\ATL\INCLUDE;
-set LIB=C:\Program Files\Microsoft Visual Studio\VC98\LIB;C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB
-set source=C:\Program Files\Microsoft Visual Studio\VC98\MFC\SRC;C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\ATL\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\CRT\SRC
-"C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV.EXE"  /useenv
-
-
 【css属性】
 --文本区域
 white-space:nowrap; overflow:auto; word-wrap:normal;
-
-
-
-【js语句】
-(function(arg){...})(param);
-(function($) {...})(jquery);
-
-var a=function($) {...};
-a(jquery);
-
-jQuery(document).ready(function(){ });
-
-//时间插件-中文
-$("#TSMGRAM_REALCA_1_birthday").datepicker({
-	inline:false,
-	dateFormat: "yy-mm-dd",
-	dayNames: [ "星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
-	dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
-	monthNamesShort: [ "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月" ]
-});
-
-//验证
-if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
-
-
-$("#TSMGRAM_REALCA_1_realSub").click(function(event){			//提交时做判断
-	event.preventDefault();										//阻止提交
-	var flag = true;
-																//对必要字段做检查
-	$("#TSMGRAM_REALCA_1_form :input.required").each(function(){
-		if( $(this).is('#TSMGRAM_REALCA_1_username') ){
-			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效用户名");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_fullname') ){
-			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效用户全称");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_sex') ){
-			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效性别");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_birthday') ){
-			if( this.value=="" ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效生日");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_id') ){
-			if( this.value.length < 11 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效身份证");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_email') ){
-			if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) )){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效邮箱");
-				return flag = false;
-			}
-		}
-		if( $(this).is('#TSMGRAM_REALCA_1_verify') ){
-			if( this.value.length != 4 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("无效验证码");
-				return flag = false;
-			}
-		}
-	});
-	
-	if( flag ){
-		$("#TSMGRAM_REALCA_1_form").submit();
-	}
-});
-
-
-
-【java编译命令】
-[soft01@localhost day053]$ javac CommandInput.java -d ../../bin
-[soft01@localhost day053]$ java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
 
 
 
@@ -324,18 +212,31 @@ execution(* com.tsm.tfb.dao.reportmpl.*.*(..))
 [任意返回参数][所有类][所有方法][所有参数]
 
 
-【环境变量】
-%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
-.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
-
-export JAVA_HOME=/usr/share/jdk1.8.0_20
-export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-
-
 【windows network】
 netsh wlan set hostednetwork mode=allow ssid=lcg51271 key=88888888 keyUsage=persistent
 netsh wlan start hostednetwork
 
 disallow
 temporary
+
+
+【知识】
+parameter	形参
+argument	实参
+
+
+【maven命令】
+mvn -v				查看
+mvn archetype:generate -DgroupId=com.mycompany.helloworld -DartifactId=helloworld -Dpackage=com.mycompany.helloworld -Dversion=1.0-SNAPSHOT
+					建立项目->组、构建、包、版本
+mvn help xxx		获取某项目的帮助
+mvn 
+	process-resources 	阶段：resources:resources
+	compile 			阶段：compiler:compile
+	process-classes 	阶段：(默认无目标)
+	process-test-resources 阶段：resources:testResources
+	test-compile 		阶段：compiler:testCompile
+	test 				阶段：surefire:test
+	prepare-package 	阶段：(默认无目标)
+	package 			阶段：jar:jar
+mvn clean install	清空、编译、打包、本地集成

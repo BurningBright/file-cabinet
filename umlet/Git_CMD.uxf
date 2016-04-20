@@ -185,10 +185,11 @@ git reset -- &lt;files...&gt; &gt;</panel_attributes>
       <x>341</x>
       <y>847</y>
       <w>253</w>
-      <h>44</h>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 git reset --mix &lt;hash&gt; &gt;
+git reset -- &lt;hash&gt; path
 group=2</panel_attributes>
     <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
   </element>
