@@ -221,8 +221,11 @@ temporary
 
 
 【知识】
-parameter	形参
-argument	实参
+parameter		形参
+argument		实参
+millisecond		ms/毫秒
+microsecond		μs/微秒
+nanosecond		ns/纳秒
 
 
 【maven命令】
