@@ -1,3 +1,11 @@
+【Jquery对象转Dom对象】
+var v=$v[0]
+
+【Dom对象转Jquery对象】
+var $v=$(v)
+
+var planId = /planId=(\d+)/.test(href) ? RegExp.$1: ''
+
 (function(arg){...})(param);
 (function($) {...})(jquery);
 
