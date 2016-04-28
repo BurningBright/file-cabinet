@@ -1,3 +1,54 @@
+【函数链】
+function monkey(banana){
+	console.log("i'm a monkey");
+	var count = 0;
+	var timer = setInterval(function(){
+			if(count++<2) {
+				console.log(count);
+				console.log("i have " + banana +"  bananas");	
+			} else {
+				clearInterval(timer);
+			}
+		},1000);
+}
+function banana() { return 10;}
+(function(a) {
+	monkey(a);
+})(banana());
+
+【直取要害，map转换流~~】
+var count = 0;
+var channelId = new Array();
+var resultId = new Array();
+$("table td input[type=checkbox]:not(:disabled)").each(function() {
+	if($(this).is(":checked")) {
+		//console.log(++count);
+		channelId.push(parseInt($(this).val()));
+		resultId.push(parseInt($(this).attr('resultId')));
+		count++;
+	}
+});
+//console.log(channelId.toString()+" "+resultId.toString());
+
+var channels = $("table td input[type=checkbox]:not(:disabled):checked").map(function(){
+	return $(this).val();
+}).get();
+var results = $("table td input[type=checkbox]:not(:disabled):checked").map(function(){
+	return $(this).attr('resultId');
+}).get();
+			
+
+【each迭代JQ数组对象，回调1为index，2为html对象】
+$("#batchBtn").on("click",function(){
+	var count = 0;
+	$("table td input[type=checkbox]").each(function(i, j) {
+		console.log("--"+i+"--"+$(j).val());
+		if($(this).is(":checked")) {
+			console.log(++count);
+		}
+	});
+});
+
 【Jquery对象转Dom对象】
 var v=$v[0]
 
