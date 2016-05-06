@@ -1,4 +1,4 @@
-¡¾º¯ÊıÁ´¡¿
+ï»¿ã€å‡½æ•°é“¾ã€‘
 function monkey(banana){
 	console.log("i'm a monkey");
 	var count = 0;
@@ -16,7 +16,7 @@ function banana() { return 10;}
 	monkey(a);
 })(banana());
 
-¡¾Ö±È¡Òªº¦£¬map×ª»»Á÷~~¡¿
+ã€ç›´å–è¦å®³ï¼Œmapè½¬æ¢æµ~~ã€‘
 var count = 0;
 var channelId = new Array();
 var resultId = new Array();
@@ -38,7 +38,7 @@ var results = $("table td input[type=checkbox]:not(:disabled):checked").map(func
 }).get();
 			
 
-¡¾eachµü´úJQÊı×é¶ÔÏó£¬»Øµ÷1Îªindex£¬2Îªhtml¶ÔÏó¡¿
+ã€eachè¿­ä»£JQæ•°ç»„å¯¹è±¡ï¼Œå›è°ƒ1ä¸ºindexï¼Œ2ä¸ºhtmlå¯¹è±¡ã€‘
 $("#batchBtn").on("click",function(){
 	var count = 0;
 	$("table td input[type=checkbox]").each(function(i, j) {
@@ -49,10 +49,10 @@ $("#batchBtn").on("click",function(){
 	});
 });
 
-¡¾Jquery¶ÔÏó×ªDom¶ÔÏó¡¿
+ã€Jqueryå¯¹è±¡è½¬Domå¯¹è±¡ã€‘
 var v=$v[0]
 
-¡¾Dom¶ÔÏó×ªJquery¶ÔÏó¡¿
+ã€Domå¯¹è±¡è½¬Jqueryå¯¹è±¡ã€‘
 var $v=$(v)
 
 var planId = /planId=(\d+)/.test(href) ? RegExp.$1: ''
@@ -65,63 +65,63 @@ a(jquery);
 
 jQuery(document).ready(function(){ });
 
-//Ê±¼ä²å¼ş-ÖĞÎÄ
+//æ—¶é—´æ’ä»¶-ä¸­æ–‡
 $("#TSMGRAM_REALCA_1_birthday").datepicker({
 	inline:false,
 	dateFormat: "yy-mm-dd",
-	dayNames: [ "ĞÇÆÚÌì", "ĞÇÆÚÒ»", "ĞÇÆÚ¶ş", "ĞÇÆÚÈı", "ĞÇÆÚËÄ", "ĞÇÆÚÎå", "ĞÇÆÚÁù"],
-	dayNamesMin: ["ÈÕ", "Ò»", "¶ş", "Èı", "ËÄ", "Îå", "Áù"],
-	monthNamesShort: [ "1ÔÂ", "2ÔÂ", "3ÔÂ", "4ÔÂ", "5ÔÂ", "6ÔÂ", "7ÔÂ", "8ÔÂ", "9ÔÂ", "10ÔÂ", "11ÔÂ", "12ÔÂ" ]
+	dayNames: [ "æ˜ŸæœŸå¤©", "æ˜ŸæœŸä¸€", "æ˜ŸæœŸäºŒ", "æ˜ŸæœŸä¸‰", "æ˜ŸæœŸå››", "æ˜ŸæœŸäº”", "æ˜ŸæœŸå…­"],
+	dayNamesMin: ["æ—¥", "ä¸€", "äºŒ", "ä¸‰", "å››", "äº”", "å…­"],
+	monthNamesShort: [ "1æœˆ", "2æœˆ", "3æœˆ", "4æœˆ", "5æœˆ", "6æœˆ", "7æœˆ", "8æœˆ", "9æœˆ", "10æœˆ", "11æœˆ", "12æœˆ" ]
 });
 
-//ÑéÖ¤
+//éªŒè¯
 if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
 
 
-$("#TSMGRAM_REALCA_1_realSub").click(function(event){			//Ìá½»Ê±×öÅĞ¶Ï
-	event.preventDefault();										//×èÖ¹Ìá½»
+$("#TSMGRAM_REALCA_1_realSub").click(function(event){			//æäº¤æ—¶åšåˆ¤æ–­
+	event.preventDefault();										//é˜»æ­¢æäº¤
 	var flag = true;
-																//¶Ô±ØÒª×Ö¶Î×ö¼ì²é
+																//å¯¹å¿…è¦å­—æ®µåšæ£€æŸ¥
 	$("#TSMGRAM_REALCA_1_form :input.required").each(function(){
 		if( $(this).is('#TSMGRAM_REALCA_1_username') ){
 			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ÓÃ»§Ãû");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆç”¨æˆ·å");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_fullname') ){
 			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ÓÃ»§È«³Æ");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆç”¨æˆ·å…¨ç§°");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_sex') ){
 			if( this.value.length < 1 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ĞÔ±ğ");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆæ€§åˆ«");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_birthday') ){
 			if( this.value=="" ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ÉúÈÕ");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆç”Ÿæ—¥");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_id') ){
 			if( this.value.length < 11 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§Éí·İÖ¤");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆèº«ä»½è¯");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_email') ){
 			if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) )){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ÓÊÏä");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆé‚®ç®±");
 				return flag = false;
 			}
 		}
 		if( $(this).is('#TSMGRAM_REALCA_1_verify') ){
 			if( this.value.length != 4 ){
-				$("#TSMGRAM_REALCA_1_msgWapper").text("ÎŞĞ§ÑéÖ¤Âë");
+				$("#TSMGRAM_REALCA_1_msgWapper").text("æ— æ•ˆéªŒè¯ç ");
 				return flag = false;
 			}
 		}

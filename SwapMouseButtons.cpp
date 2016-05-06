@@ -1,4 +1,4 @@
-//============================================================================
+ï»¿//============================================================================
 // Name        : SwapMouseButtons.cpp
 // Author      : Chen
 // Version     :
@@ -15,11 +15,11 @@ int main() {
 	//cout << "Hello Mickey" << endl;
 
 	/*
-	 LONG RegOpenKeyEx(HKEY hKey,	//ÒÑ¾­´ò¿ªµÄ¼üµÄ¾ä±ú£¬»òÕßÖ±½ÓÊÇÉÏÊö¼¸¸ö¸ù¼ü
-	 LPCTSTR lpSubKey,				//Òª´ò¿ªµÄ×Ó¼üÃû×ÖµÄµØÖ·
-	 DWORD ulOptions,				//±£ÁôÖµ£¬±ØÐëÎª0
-	 REGSAM samDesired,				//´ò¿ª·½Ê½£¬Èç¶Á»¹ÊÇÐ´
-	 PHKEY phkResult				//·µ»ØµÄ´ò¿ªµÄ×Ó¼üµÄ¾ä±ú
+	 LONG RegOpenKeyEx(HKEY hKey,	//å·²ç»æ‰“å¼€çš„é”®çš„å¥æŸ„ï¼Œæˆ–è€…ç›´æŽ¥æ˜¯ä¸Šè¿°å‡ ä¸ªæ ¹é”®
+	 LPCTSTR lpSubKey,				//è¦æ‰“å¼€çš„å­é”®åå­—çš„åœ°å€
+	 DWORD ulOptions,				//ä¿ç•™å€¼ï¼Œå¿…é¡»ä¸º0
+	 REGSAM samDesired,				//æ‰“å¼€æ–¹å¼ï¼Œå¦‚è¯»è¿˜æ˜¯å†™
+	 PHKEY phkResult				//è¿”å›žçš„æ‰“å¼€çš„å­é”®çš„å¥æŸ„
 	 );
 	 */
 	HKEY key;
@@ -34,12 +34,12 @@ int main() {
 	//	::RegCloseKey(key);
 
 	/*
-	 LONG RegQueryValueEx(HKEY hKey,	//Òª²éÑ¯µÄ¼üµÄ¾ä±ú
-	 LPCTSTR lpValueName,				//Òª²éÑ¯µÄ¼üÖµµÄÃû³Æ
-	 LPDWORD lpReserved,				//±£ÁôÖµ
-	 LPDWORD lpType,					//Òª²éÑ¯µÄÊý¾ÝµÄÀàÐÍ
-	 LPBYTE lpData,						//Òª·µ»ØµÄ²éÑ¯µÄÊý¾Ý
-	 LPDWORD lpcbData					//Ô¤ÖÃµÄÊý¾ÝµÄ³¤¶È
+	 LONG RegQueryValueEx(HKEY hKey,	//è¦æŸ¥è¯¢çš„é”®çš„å¥æŸ„
+	 LPCTSTR lpValueName,				//è¦æŸ¥è¯¢çš„é”®å€¼çš„åç§°
+	 LPDWORD lpReserved,				//ä¿ç•™å€¼
+	 LPDWORD lpType,					//è¦æŸ¥è¯¢çš„æ•°æ®çš„ç±»åž‹
+	 LPBYTE lpData,						//è¦è¿”å›žçš„æŸ¥è¯¢çš„æ•°æ®
+	 LPDWORD lpcbData					//é¢„ç½®çš„æ•°æ®çš„é•¿åº¦
 	 );
 	 */
 	char dwValue[256];
@@ -51,15 +51,15 @@ int main() {
 		::RegCloseKey(key);
 		//return 0;
 	}
-	//cout << "Succeed£º has got regedit info" << dwValue << endl;
+	//cout << "Succeedï¼š has got regedit info" << dwValue << endl;
 
 	/*
-	 LONG RegSetValueEx(HKEY hKey,	//ÒªÉèÖÃµÄ¼üµÄ¾ä±ú
-	 LPCTSTR lpValueName,			//Òª·ÃÎÊµÄ¼üÖµµÄÃû³Æ
-	 LPDWORD lpReserved,			//±£ÁôÖµ
-	 DWORD dwType,					//ÒªÉèÖÃµÄÊý¾ÝµÄÀàÐÍ
-	 const BYTE *lpData,			//ÒªÉèÖÃµÄ½¡Öµ
-	 DWORD cbData					//Êý¾ÝµÄ³¤¶È
+	 LONG RegSetValueEx(HKEY hKey,	//è¦è®¾ç½®çš„é”®çš„å¥æŸ„
+	 LPCTSTR lpValueName,			//è¦è®¿é—®çš„é”®å€¼çš„åç§°
+	 LPDWORD lpReserved,			//ä¿ç•™å€¼
+	 DWORD dwType,					//è¦è®¾ç½®çš„æ•°æ®çš„ç±»åž‹
+	 const BYTE *lpData,			//è¦è®¾ç½®çš„å¥å€¼
+	 DWORD cbData					//æ•°æ®çš„é•¿åº¦
 	 );
 	 */
 	if (dwValue[0] == '1') {
@@ -74,7 +74,7 @@ int main() {
 		}
 		//cout << "write 0 succeed" << endl;
 
-		//±äÕý³£
+		//å˜æ­£å¸¸
 		SwapMouseButton(0);
 		//cout << "->right hand" << endl;
 	} else {
@@ -88,11 +88,11 @@ int main() {
 		}
 		//cout << "write 1 succeed" << endl;
 
-		//µ÷»»
+		//è°ƒæ¢
 		SwapMouseButton(1);
 		//cout << "->left hand" << endl;
 	}
-	//³ÌÐò½áÊø£¬¹Ø±Õ´ò¿ªµÄkey¾ä±ú
+	//ç¨‹åºç»“æŸï¼Œå…³é—­æ‰“å¼€çš„keyå¥æŸ„
 	::RegCloseKey(key);
 	//cin >> dwValue;
 	//return 0;

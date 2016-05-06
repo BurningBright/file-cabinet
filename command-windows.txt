@@ -1,4 +1,4 @@
-¡¾windows service ÃüÁî¡¿
+ï»¿ã€windows service å‘½ä»¤ã€‘
 sc create FilesWatcherInWindows binpath= "C:\Documents and Settings\FilesWatcherInWindows.exe"
 
 YourEXE.exe /Service
@@ -6,10 +6,10 @@ net start YourEXE.exe
 YourEXE.exe /UnregServer
 
 
-¡¾windows bat ÃüÁî¡¿
+ã€windows bat å‘½ä»¤ã€‘
 @echo off / echo hello world
---'dir  /ab/b url' urlÄ¿Â¼ÏÂ
---'dir	/s/b url' urlµİ¹éÏÂ
+--'dir  /ab/b url' urlç›®å½•ä¸‹
+--'dir	/s/b url' urlé€’å½’ä¸‹
 for /f "delims=" %%a in ('dir /s/b C:\Users\Chen\Desktop\a\*.txt') do (
 REM echo %cd%\%%a
 move /y "%%a" "C:\Users\Chen\Desktop\a\"
@@ -17,7 +17,7 @@ move /y "%%a" "C:\Users\Chen\Desktop\a\"
 pause
 
 
-²é¿´ÎÄ¼şMD5
+æŸ¥çœ‹æ–‡ä»¶MD5
 certutil -hashfile yourfilename.ext MD5
 certutil -hashfile yourfilename.ext SHA1
 certutil -hashfile yourfilename.ext SHA256

@@ -1,5 +1,5 @@
-¡¾×Ö·û´®º¯Êı¡¿
-1. ×Ö·û´®½ØÈ¡£ºleft(str, length)
+ï»¿ã€å­—ç¬¦ä¸²å‡½æ•°ã€‘
+1. å­—ç¬¦ä¸²æˆªå–ï¼šleft(str, length)
 mysql> select left('example.com', 3);
 +-------------------------+
 | left('example.com', 3)  |
@@ -7,7 +7,7 @@ mysql> select left('example.com', 3);
 | exa                     |
 +-------------------------+
 
-2. ×Ö·û´®½ØÈ¡£ºright(str, length)
+2. å­—ç¬¦ä¸²æˆªå–ï¼šright(str, length)
 mysql> select right('example.com', 3);
 +--------------------------+
 | right('example.com', 3)  |
@@ -15,9 +15,9 @@ mysql> select right('example.com', 3);
 | com                      |
 +--------------------------+
 
-3. ×Ö·û´®½ØÈ¡£ºsubstring(str, pos); substring(str, pos, len)
+3. å­—ç¬¦ä¸²æˆªå–ï¼šsubstring(str, pos); substring(str, pos, len)
 
-	3.1 ´Ó×Ö·û´®µÄµÚ 4 ¸ö×Ö·ûÎ»ÖÃ¿ªÊ¼È¡£¬Ö±µ½½áÊø¡£
+	3.1 ä»å­—ç¬¦ä¸²çš„ç¬¬ 4 ä¸ªå­—ç¬¦ä½ç½®å¼€å§‹å–ï¼Œç›´åˆ°ç»“æŸã€‚
 	mysql> select substring('example.com', 4);
 	+------------------------------+
 	| substring('example.com', 4)  |
@@ -25,7 +25,7 @@ mysql> select right('example.com', 3);
 	| ple.com                      |
 	+------------------------------+
 	
-	3.2 ´Ó×Ö·û´®µÄµÚ 4 ¸ö×Ö·ûÎ»ÖÃ¿ªÊ¼È¡£¬Ö»È¡ 2 ¸ö×Ö·û¡£
+	3.2 ä»å­—ç¬¦ä¸²çš„ç¬¬ 4 ä¸ªå­—ç¬¦ä½ç½®å¼€å§‹å–ï¼Œåªå– 2 ä¸ªå­—ç¬¦ã€‚
 	mysql> select substring('example.com', 4, 2);
 	+---------------------------------+
 	| substring('example.com', 4, 2)  |
@@ -33,7 +33,7 @@ mysql> select right('example.com', 3);
 	| pl                              |
 	+---------------------------------+
 	
-	3.3 ´Ó×Ö·û´®µÄµÚ 4 ¸ö×Ö·ûÎ»ÖÃ£¨µ¹Êı£©¿ªÊ¼È¡£¬Ö±µ½½áÊø¡£
+	3.3 ä»å­—ç¬¦ä¸²çš„ç¬¬ 4 ä¸ªå­—ç¬¦ä½ç½®ï¼ˆå€’æ•°ï¼‰å¼€å§‹å–ï¼Œç›´åˆ°ç»“æŸã€‚
 	mysql> select substring('example.com', -4);
 	+-------------------------------+
 	| substring('example.com', -4)  |
@@ -41,7 +41,7 @@ mysql> select right('example.com', 3);
 	| .com                          |
 	+-------------------------------+
 	
-	3.4 ´Ó×Ö·û´®µÄµÚ 4 ¸ö×Ö·ûÎ»ÖÃ£¨µ¹Êı£©¿ªÊ¼È¡£¬Ö»È¡ 2 ¸ö×Ö·û¡£
+	3.4 ä»å­—ç¬¦ä¸²çš„ç¬¬ 4 ä¸ªå­—ç¬¦ä½ç½®ï¼ˆå€’æ•°ï¼‰å¼€å§‹å–ï¼Œåªå– 2 ä¸ªå­—ç¬¦ã€‚
 	mysql> select substring('example.com', -4, 2);
 	+----------------------------------+
 	| substring('example.com', -4, 2)  |
@@ -49,11 +49,11 @@ mysql> select right('example.com', 3);
 	| .c                               |
 	+----------------------------------+
 	
-	ÎÒÃÇ×¢Òâµ½ÔÚº¯Êı substring(str,pos, len)ÖĞ£¬ pos ¿ÉÒÔÊÇ¸ºÖµ£¬µ« len ²»ÄÜÈ¡¸ºÖµ¡£
+	æˆ‘ä»¬æ³¨æ„åˆ°åœ¨å‡½æ•° substring(str,pos, len)ä¸­ï¼Œ pos å¯ä»¥æ˜¯è´Ÿå€¼ï¼Œä½† len ä¸èƒ½å–è´Ÿå€¼ã€‚
 
-4. ×Ö·û´®½ØÈ¡£ºsubstring_index(str,delim,count)
+4. å­—ç¬¦ä¸²æˆªå–ï¼šsubstring_index(str,delim,count)
 
-	4.1 ½ØÈ¡µÚ¶ş¸ö '.' Ö®Ç°µÄËùÓĞ×Ö·û¡£
+	4.1 æˆªå–ç¬¬äºŒä¸ª '.' ä¹‹å‰çš„æ‰€æœ‰å­—ç¬¦ã€‚
 	mysql> select substring_index('www.example.com', '.', 2);
 	+------------------------------------------------+
 	| substring_index('www.example.com', '.', 2)     |
@@ -61,7 +61,7 @@ mysql> select right('example.com', 3);
 	| www                                            |
 	+------------------------------------------------+
 	
-	4.2 ½ØÈ¡µÚ¶ş¸ö '.' £¨µ¹Êı£©Ö®ºóµÄËùÓĞ×Ö·û¡£
+	4.2 æˆªå–ç¬¬äºŒä¸ª '.' ï¼ˆå€’æ•°ï¼‰ä¹‹åçš„æ‰€æœ‰å­—ç¬¦ã€‚
 	mysql> select substring_index('www.example.com', '.', -2);
 	+-------------------------------------------------+
 	| substring_index('www.example.com', '.', -2)     |
@@ -69,7 +69,7 @@ mysql> select right('example.com', 3);
 	| example.com                                     |
 	+-------------------------------------------------+
 	
-	4.3 Èç¹ûÔÚ×Ö·û´®ÖĞÕÒ²»µ½ delim ²ÎÊıÖ¸¶¨µÄÖµ£¬¾Í·µ»ØÕû¸ö×Ö·û´®
+	4.3 å¦‚æœåœ¨å­—ç¬¦ä¸²ä¸­æ‰¾ä¸åˆ° delim å‚æ•°æŒ‡å®šçš„å€¼ï¼Œå°±è¿”å›æ•´ä¸ªå­—ç¬¦ä¸²
 	mysql> select substring_index('www.example.com', '.coc', 1);
 	+---------------------------------------------------+
 	| substring_index('www.example.com', '.coc', 1)     |
@@ -77,14 +77,14 @@ mysql> select right('example.com', 3);
 	| www.example.com                                   |
 	+---------------------------------------------------+
 
-¡¾sql¡¿
+ã€sqlã€‘
 select * from uls_order t where 
 	t.operation_time > date_format(date_sub(sysdate(), INTERVAL 0 DAY), '%Y-%m-%d') 
 	AND t.operation_time < date_format(date_sub(sysdate(), INTERVAL -1 DAY), '%Y-%m-%d');
 
 SELECT * FROM dsp_unit t1 WHERE CONCAT(',',t1.visitor_recall,',') REGEXP '[,]16[,]';
 
-¡¾mysqlÃüÃû¡¿
+ã€mysqlå‘½åã€‘
 mysql -u name -p password -h host
 mysql -u root
 show databases
@@ -92,7 +92,7 @@ use lcg;
 show tables;
 create datatbase tfb default character set utf8;
 create user 'tfb'@'%' identified by 'tfb'
-//¸³È¨
+//èµ‹æƒ
 grant all privileges on tfb.* to 'tfb'@'%' identified by 'tfb';
 grant all privileges on tfb.* to 'tfb'@'127.0.0.1' identified by 'be2f6o';
 grant all privileges on tfb.* to 'tfb'@'localhost' identified by 'be2f6o';
@@ -100,18 +100,18 @@ grant all privileges on tfb.* to 'tfb'@'10.0.0.14' identified by 'be2f6o';
 
 flush privileges;
 
-mysqldump -u ÓÃ»§Ãû -p Êı¾İ¿âÃû > µ¼³öµÄÎÄ¼şÃû
+mysqldump -u ç”¨æˆ·å -p æ•°æ®åº“å > å¯¼å‡ºçš„æ–‡ä»¶å
 source [address]
 
 
 str_to_date('30-09-2015 23:57:00','%d-%m-%Y %H:%i:%S')
-date_format(date,'%Y-%m-%d')     -------------->oracleÖĞµÄto_char();
-str_to_date(date,'%Y-%m-%d')     -------------->oracleÖĞµÄto_date();
+date_format(date,'%Y-%m-%d')     -------------->oracleä¸­çš„to_char();
+str_to_date(date,'%Y-%m-%d')     -------------->oracleä¸­çš„to_date();
 
 
 
-¡¾Ä£ÄâĞòÁĞ¡¿
--- 1½¨ĞòÁĞ±í
+ã€æ¨¡æ‹Ÿåºåˆ—ã€‘
+-- 1å»ºåºåˆ—è¡¨
 CREATE TABLE dmn_mysequence ( 
 `name` varchar(50) NOT NULL, 
 `current_value` int(11) NOT NULL, 
@@ -121,7 +121,7 @@ PRIMARY KEY (`name`)
 
 
 
--- 2½¨±í
+-- 2å»ºè¡¨
 DROP TABLE IF EXISTS `tas_app`.`tas_music`; 
 CREATE TABLE  `tas_app`.`tas_music` ( 
 `id` int(4) NOT NULL AUTO_INCREMENT, 
@@ -133,10 +133,10 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2093 DEFAULT CHARSET=utf8;
 
 
--- 3ĞòÁĞ±íÀï²åÈëÈçÏÂ¼ÇÂ¼ 
+-- 3åºåˆ—è¡¨é‡Œæ’å…¥å¦‚ä¸‹è®°å½• 
 insert into tas_app.dmn_mysequence values('music',23,1); 
 
--- 4´´½¨nextval function: 
+-- 4åˆ›å»ºnextval function: 
 DELIMITER $$ 
 DROP FUNCTION IF EXISTS `nextval` $$ 
 CREATE DEFINER=`admin`@`%` FUNCTION `nextval`(seq_name VARCHAR(50)) RETURNS int(11) 
@@ -148,7 +148,7 @@ RETURN currval(seq_name);
 END $$ 
 DELIMITER ; 
 
--- 5´´½¨setval function: 
+-- 5åˆ›å»ºsetval function: 
 DELIMITER $$ 
 DROP FUNCTION IF EXISTS `setval` $$ 
 CREATE DEFINER=`admin`@`%` FUNCTION `setval`(seq_name VARCHAR(50), value INTEGER) RETURNS int(11) 
@@ -160,7 +160,7 @@ RETURN currval(seq_name);
 END $$ 
 DELIMITER ; 
 
--- 6´´½¨currval function: 
+-- 6åˆ›å»ºcurrval function: 
 DELIMITER $$ 
 DROP FUNCTION IF EXISTS `currval` $$ 
 CREATE DEFINER=`admin`@`%` FUNCTION `currval`(seq_name VARCHAR(50)) RETURNS int(11) 
@@ -174,7 +174,7 @@ BEGIN
 END $$ 
 DELIMITER ; 
 
--- 7´´½¨´¥·¢Æ÷ 
+-- 7åˆ›å»ºè§¦å‘å™¨ 
 DELIMITER $$ 
 drop trigger if exists tas_music_trigger $$ 
 create trigger tas_music_trigger before insert on tas_music 
@@ -187,7 +187,7 @@ DELIMITER ;
 
 
 
-¡¾mysql´æ´¢¹ı³Ì&¼Æ»®ÈÎÎñ&ÊÂ¼ş¡¿
+ã€mysqlå­˜å‚¨è¿‡ç¨‹&è®¡åˆ’ä»»åŠ¡&äº‹ä»¶ã€‘
 CREATE EVENT order_create ON SCHEDULE EVERY 1 DAY 
 STARTS '2016-01-14 23:55:00'  ON COMPLETION NOT PRESERVE ENABLE 
 DO call create_order_table();
@@ -245,25 +245,25 @@ BEGIN
 	
 	SET t_sql="CREATE OR REPLACE VIEW uls_order_view AS ";
 	#SET flag=0;
-	-- ×¼±¸µÄ¶©µ¥ÊÓÍ¼T-1¡¢T
+	-- å‡†å¤‡çš„è®¢å•è§†å›¾T-1ã€T
 	SET t_from=1;
 	SET t_to=0;
 	
 	WHILE t_to<=t_from do
-		-- ×éºÏ±íÃû
+		-- ç»„åˆè¡¨å
 		SET v_name=CONCAT("uls_order_", REPLACE(DATE(DATE_SUB(now(), INTERVAL t_to DAY)), "-",""));
 		
-		-- ¼ì²â±íÃû
+		-- æ£€æµ‹è¡¨å
 		SET @ret=CONCAT("SELECT TABLE_NAME into v_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='tfb' AND TABLE_NAME='",v_name,"';");
 		select @ret;
 		if LENGTH(v_name)>0 THEN
 			#SET flag=1;
-			-- ¼ÓÈëÊÓÍ¼
+			-- åŠ å…¥è§†å›¾
 			set t_sql=CONCAT(t_sql, "SELECT * FROM ", v_name);
 			IF t_to!=t_from THEN
 				set t_sql=CONCAT(t_sql, " union all ");
 			ELSE
-			-- Èôµ½Ä©Î²¼Ó·âºÅ
+			-- è‹¥åˆ°æœ«å°¾åŠ å°å·
 				set t_sql=CONCAT(t_sql, ";");
 			END IF;
 		END IF;
@@ -288,25 +288,25 @@ BEGIN
 	
 	SET t_sql="CREATE OR REPLACE VIEW uls_refund_view AS ";
 	SET flag=0;
-	-- ×¼±¸µÄÍË¿îÊÓÍ¼ÔÚÏÂÒ»ÌìÍË¿î£¬¼´»á³ÉÎªT-3¡¢T-2
+	-- å‡†å¤‡çš„é€€æ¬¾è§†å›¾åœ¨ä¸‹ä¸€å¤©é€€æ¬¾ï¼Œå³ä¼šæˆä¸ºT-3ã€T-2
 	SET t_from=2;
 	SET t_to=1;
 	
 	WHILE t_to<=t_from do
-		-- ×éºÏ±íÃû
+		-- ç»„åˆè¡¨å
 		SET v_name=CONCAT("uls_order_", REPLACE(DATE(DATE_SUB(now(), INTERVAL t_to DAY)), "-",""));
 		
-		-- ¼ì²â±íÃû
+		-- æ£€æµ‹è¡¨å
 		SET @ret=CONCAT("SELECT TABLE_NAME into v_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='tfb' AND TABLE_NAME='",v_name,"';");
 		select @ret;
 		if LENGTH(v_name)>0 THEN
 			SET flag=1;
-			-- ¼ÓÈëÊÓÍ¼
+			-- åŠ å…¥è§†å›¾
 			set t_sql=CONCAT(t_sql, "SELECT * FROM ", v_name);
 			IF t_to!=t_from THEN
 				set t_sql=CONCAT(t_sql, " union all ");
 			ELSE
-			-- Èôµ½Ä©Î²¼Ó·âºÅ
+			-- è‹¥åˆ°æœ«å°¾åŠ å°å·
 				set t_sql=CONCAT(t_sql, ";");
 			END IF;
 		END IF;
@@ -314,7 +314,7 @@ BEGIN
 		set t_to=t_to+1;
 	END WHILE;
 	
-	-- Èç¹û²»´æÔÚ±í£¬Ìí¼ÓÄ¬ÈÏ±í
+	-- å¦‚æœä¸å­˜åœ¨è¡¨ï¼Œæ·»åŠ é»˜è®¤è¡¨
 	IF flag=0 THEN
 		SET t_sql=CONCAT(t_sql, "SELECT * FROM uls_order;");
 	END IF;
