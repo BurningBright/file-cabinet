@@ -1,4 +1,12 @@
-﻿【windows service 命令】
+【windows network】
+netsh wlan set hostednetwork mode=allow ssid=lcg51271 key=88888888 keyUsage=persistent
+netsh wlan start hostednetwork
+
+disallow
+temporary
+
+
+【windows service 命令】
 sc create FilesWatcherInWindows binpath= "C:\Documents and Settings\FilesWatcherInWindows.exe"
 
 YourEXE.exe /Service
@@ -42,4 +50,3 @@ set include=C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE;C:\Program Fil
 set LIB=C:\Program Files\Microsoft Visual Studio\VC98\LIB;C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB
 set source=C:\Program Files\Microsoft Visual Studio\VC98\MFC\SRC;C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\ATL\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\CRT\SRC
 "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV.EXE"  /useenv
-
