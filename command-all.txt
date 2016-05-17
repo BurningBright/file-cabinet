@@ -140,9 +140,21 @@ vi /etc/hosts.allow
 
 systemctl restart sshd         #重启openssh
 
+【java注释】
+
+类注释
+/**
+ * @Description 
+ * @author Leon
+ * @date ${date} ${time}
+ * ${tags}
+ */
+
 
 【java编译命令】
 javac CommandInput.java -d ../../bin
+javac GlobalTemplateVariables.java -d ./ -classpath D:\eclipse\plugins\com.ibm.icu_54.1.1.v201501272100.jar;D:\eclipse\plugins\org.eclipse.text_3.5.0.v20100601-1300_backup.jar;	//-d强制指定路径，会覆盖原有文件;不加-d如果有老文件，会出现在java目录
+
 java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
 java -classpath xxx.jar x.xx.xxx.class [args]
 java -jar xxx\mybatis-generator-core-1.3.2.jar -configfile xxx\generator.xml -overwrite
