@@ -50,3 +50,10 @@ set include=C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE;C:\Program Fil
 set LIB=C:\Program Files\Microsoft Visual Studio\VC98\LIB;C:\Program Files\Microsoft Visual Studio\VC98\MFC\LIB
 set source=C:\Program Files\Microsoft Visual Studio\VC98\MFC\SRC;C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\ATL\INCLUDE;C:\Program Files\Microsoft Visual Studio\VC98\CRT\SRC
 "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV.EXE"  /useenv
+
+强制刷新策略组
+gpupdate/force 
+
+
+【ffmpeg】
+ffprobe -v quiet -print_format json -show_format -show_streams /E:/workspace2.0/dsp-adv/classes/1472626584395.flv
