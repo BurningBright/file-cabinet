@@ -1,4 +1,14 @@
-﻿//设置 ~/.gitconfig配置下的用户
+﻿//Hello git
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:BurningBright/java-multi-thread.git
+git push -u origin master
+
+//重命名使用移动命令
+git mv xx xxx
+
+//设置 ~/.gitconfig配置下的用户
 git config --global user.email "xxx@gmail.com"
 git config --global user.name "BurningBright"
 
