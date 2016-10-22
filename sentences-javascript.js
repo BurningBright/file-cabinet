@@ -1,3 +1,9 @@
+¡¾×ÔÖ´ÐÐ¡¿
+$(function(){$("#a").click(function(){xxx});}); 
+$(document).ready(function(){$("#a").click(function(){xxx});});
+window.onload = function(){$("#a").click(function(){xxx});}
+
+
 ¡¾º¯ÊýÁ´¡¿
 function monkey(banana){
 	console.log("i'm a monkey");
