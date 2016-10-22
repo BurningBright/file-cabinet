@@ -1,8 +1,18 @@
-//ÉèÖÃ ~/.gitconfigÅäÖÃÏÂµÄÓÃ»§
+ï»¿//Hello git
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:BurningBright/java-multi-thread.git
+git push -u origin master
+
+//é‡å‘½åä½¿ç”¨ç§»åŠ¨å‘½ä»¤
+git mv xx xxx
+
+//è®¾ç½® ~/.gitconfigé…ç½®ä¸‹çš„ç”¨æˆ·
 git config --global user.email "xxx@gmail.com"
 git config --global user.name "BurningBright"
 
-//ÒªÏÈÔÚGitÍøÒ³ÉÏĞÂ½¨Respository
+//è¦å…ˆåœ¨Gitç½‘é¡µä¸Šæ–°å»ºRespository
 git remote add origin git@github.com:BurningBright/dropbox.git
 git remote -v
 git remote show origin
@@ -10,9 +20,9 @@ git remote remove origin
 git remote add origin git@github.com:BurningBright/filecabinet.git
 
 git push -u origin master
-git push -f //Ç¿Á¦ÍÆËÍ
+git push -f //å¼ºåŠ›æ¨é€
 
-//ÉèÖÃ ~/.gitconfigÅäÖÃÏÂµÄ±ğÃû¡¾±¾µØ²Ö¿âÏÂ/.git/config¡¿¡¾°²×°Ä¿Â¼ÏÂ/etc/config¡¿
+//è®¾ç½® ~/.gitconfigé…ç½®ä¸‹çš„åˆ«åã€æœ¬åœ°ä»“åº“ä¸‹/.git/configã€‘ã€å®‰è£…ç›®å½•ä¸‹/etc/configã€‘
 git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.ci commit
@@ -21,7 +31,7 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.last 'log -1'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-//·ÖÖ§ÇĞ»»¡¢ĞÂ½¨£¬Ô¶³Ì»ñÈ¡¡¢ºÏ²¢¡¾¶àÈËĞ´×÷Ê±×îºÃÊ¹ÓÃfetch&merger¡¿
+//åˆ†æ”¯åˆ‡æ¢ã€æ–°å»ºï¼Œè¿œç¨‹è·å–ã€åˆå¹¶ã€å¤šäººå†™ä½œæ—¶æœ€å¥½ä½¿ç”¨fetch&mergerã€‘
 git fectch origin master:shit
 git checkout shit
 git merge
@@ -29,14 +39,14 @@ git branch -d shit
 
 git pull origin master
 
-//»º´æÖĞÒÆ³ı/Í¬Ê±ÒÆ³ı
+//ç¼“å­˜ä¸­ç§»é™¤/åŒæ—¶ç§»é™¤
 git add .
 git rm --cached xxx
 git rm -f xxx
 
 /*
-*  ±£´æµ±Ç°¹¤×÷£¬µ±ÓĞ½ô¼±¹¤×÷Ê±£¬ÓÖ²»ÏëcommitÏÖÔÚ×öÒ»°ëµÄ¹¤×÷£¬
-*  ¾ÍÓÃgit stash£¬È»ºó¾Í¿ÉÒÔÇĞ»»µ½ÆäËû·ÖÖ§½øĞĞ½ô¼±¹¤×÷¡£
+*  ä¿å­˜å½“å‰å·¥ä½œï¼Œå½“æœ‰ç´§æ€¥å·¥ä½œæ—¶ï¼Œåˆä¸æƒ³commitç°åœ¨åšä¸€åŠçš„å·¥ä½œï¼Œ
+*  å°±ç”¨git stashï¼Œç„¶åå°±å¯ä»¥åˆ‡æ¢åˆ°å…¶ä»–åˆ†æ”¯è¿›è¡Œç´§æ€¥å·¥ä½œã€‚
 */
 git help stash
 git stash
@@ -44,12 +54,12 @@ git stash pop
 git stash pop stash@{num}
 git stash clear
 
-//ÈÕÖ¾Õ¹ÏÖĞÎÊ½
+//æ—¥å¿—å±•ç°å½¢å¼
 git log --graph
 git log --online
 git log --graph --online --all
 
-//±È¶Ô±¾µØ¿â/±¾µØ»º´æ
+//æ¯”å¯¹æœ¬åœ°åº“/æœ¬åœ°ç¼“å­˜
 git reset --soft c175f5e
 git diff HEAD
 git diff c175f5e
@@ -57,13 +67,13 @@ git diff c175f5e
 git reset --mix c175f5e
 git diff
 
-//¶Ô×î½üµÄcommit×öĞŞ¸Ä
+//å¯¹æœ€è¿‘çš„commitåšä¿®æ”¹
 git commit --amend -m"xxx"
 git push <remote> <branch> --force
 
-//ÖØĞÂÕûÀícommit
+//é‡æ–°æ•´ç†commit
 git rebase -i c175f5e
 git push -f origin master
 
-//ÖØĞÂÕûÀíÑ¹Ëõ¿Õ¼ä
+//é‡æ–°æ•´ç†å‹ç¼©ç©ºé—´
 git gc --prune=now

@@ -35,8 +35,8 @@ unzip	解包命令	-o master.zip -d protobuf\ 解压，覆盖
 
 cp -s dir_target dir_point		文件链接
 ln -s dir_target dir_point		文件夹链接
-		
-		
+
+
 --筛选日志
 grep 041017 vipmanager_20151028_1 | cat -n
 grep 041017 vipmanager_20151028_1 >> tmp
@@ -156,12 +156,28 @@ vi /etc/hosts.allow
 
 systemctl restart sshd         #重启openssh
 
+【java注释】
+
+类注释
+/**
+ * @Description 
+ * @author Leon
+ * @date ${date} ${time}
+ * ${tags}
+ */
+
 
 【java编译命令】
 javac CommandInput.java -d ../../bin
+javac GlobalTemplateVariables.java -d ./ -classpath D:\eclipse\plugins\com.ibm.icu_54.1.1.v201501272100.jar;D:\eclipse\plugins\org.eclipse.text_3.5.0.v20100601-1300_backup.jar;	//-d强制指定路径，会覆盖原有文件;不加-d如果有老文件，会出现在java目录
+
 java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
 java -classpath xxx.jar x.xx.xxx.class [args]
+java -jar xxx\mybatis-generator-core-1.3.2.jar -configfile xxx\generator.xml -overwrite
 
+主类带包路径-带路径编译(或指定路径)-带路径执行(或指定目标)
+javac cn/lcg/multi/App.java
+java cn/lcg/multi/App
 
 【环境变量】
 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
@@ -203,37 +219,11 @@ EOF
 white-space:nowrap; overflow:auto; word-wrap:normal;
 
 
-
-【regex正则表达】
---格式化单行xml格式报文
-(?<=>)(?=<(?!\/))
-
---找到前是linux换行，后不是'320500'的光标
-\n(?!320500)
-
---找到后不是'create'的windows换行。即\r\n(?!create)
-(?!(\r\ncreate))\r\n
-
---平衡组匹配？？？
-(?'Open'\()[2-9][0-9]{2}(?'-Open'\))\s?[0-9]{3}-[0-9]{4}(?(Open)(?!))|[2-9][0-9]{2}(-|\.)[0-9]{3}\1[0-9]{4}
-<div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div>
-
---找非词组空格
-(?<![a-z,A-Z]) | (?![a-z,A-Z])
-
-
 【ssh配置】
 --hibernate
 execution(* com.tsm.tfb.dao.reportmpl.*.*(..))
 [任意返回参数][所有类][所有方法][所有参数]
 
-
-【windows network】
-netsh wlan set hostednetwork mode=allow ssid=lcg51271 key=88888888 keyUsage=persistent
-netsh wlan start hostednetwork
-
-disallow
-temporary
 
 
 【知识】
@@ -249,7 +239,7 @@ mvn -v				查看
 mvn archetype:generate -DgroupId=com.mycompany.helloworld -DartifactId=helloworld -Dpackage=com.mycompany.helloworld -Dversion=1.0-SNAPSHOT
 					建立项目->组、构建、包、版本
 mvn help xxx		获取某项目的帮助
-mvn 
+mvn
 	process-resources 	阶段：resources:resources
 	compile 			阶段：compiler:compile
 	process-classes 	阶段：(默认无目标)
