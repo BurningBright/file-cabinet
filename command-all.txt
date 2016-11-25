@@ -70,7 +70,8 @@ ffmpeg -f dshow -i video="PC Camera" -s 720*480 -aspect 4:3 -r 15 -vcodec flv   
 [根据ngnix上server类型的不同可以分rtmp形式和hls形式。rtmp各终端同步，适合直播；hls不同步，适合点播]
 ffmpeg -re -i "input.mp4" -vcodec libx264 -vprofile baseline -acodec aac   -ar 44100 -strict -2 -ac 1 -f flv -s 720x480 -q 10 rtmp://localhost:1935/live/demo
 
-
+媒体信息
+ffprobe -v quiet -print_format json -show_format -show_streams xxx.mp4
 
 【arch安装】
 // 测试网络
