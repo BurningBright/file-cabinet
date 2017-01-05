@@ -54,6 +54,15 @@ ssh-keygen -t rsa -C "lcg51271@gmail.com"
 curl -d 'card_code=2150999999990034' http://app.unservice.net:3001/api/recharge_card
 rsync -avzP TransferBack.war 122.224.81.254:/usr/local/tomcat/tfb_test
 
+/-----------------------各发行版有差别
+yum list *ftp*
+rpm -q vsftpd
+rpm -qa | grep vsftpd
+
+service vsftpd start
+service vsftpd stop
+service vsftpd restart
+
 
 
 【ffmpeg命令】
