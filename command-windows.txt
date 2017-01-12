@@ -1,3 +1,15 @@
+【证书】
+keytool -genkey -alias ssodemo -keyalg RSA -keysize 1024 -keypass 123456 -validity 365 -keystore c:\elephant.keystore -storepass 123456
+keytool -genkey -alias ssodemo -keyalg RSA -keysize 1024  -validity 365 -keystore c:\elephant.keystore
+username:server.elephant51271.com
+keytool -export -alias ssodemo -keystore c:\elephant.keystore -file c:\ssodemo.crt -storepass 123456
+keytool -import -keystore %JAVA_HOME%\jre\lib\security\cacerts -file c:\ssodemo.crt -alias ssodemo
+password:changeit
+
+keytool -delete -alias ssodemo -keystore %JAVA_HOME%\jre\lib\security\cacerts
+keytool -list -keystore %JAVA_HOME%\jre\lib\security\cacerts
+
+
 【无线网】
 启动
 netsh wlan set hostednetwork mode=allow ssid=WIFI key=123456
