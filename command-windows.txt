@@ -1,3 +1,11 @@
+【策略组】
+gpedit.msc
+gpupdate/force
+gpupdate/target:user
+gpupdate/target:computer
+dir /x 列出文件短名
+
+
 【证书】
 keytool -genkey -alias ssodemo -keyalg RSA -keysize 1024 -keypass 123456 -validity 365 -keystore c:\elephant.keystore -storepass 123456
 keytool -genkey -alias ssodemo -keyalg RSA -keysize 1024  -validity 365 -keystore c:\elephant.keystore
