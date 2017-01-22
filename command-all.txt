@@ -261,3 +261,37 @@ mvn
 	prepare-package 	阶段：(默认无目标)
 	package 			阶段：jar:jar
 mvn clean install	清空、编译、打包、本地集成
+
+【npm】
+// 安装
+npm uninstall hexo
+npm install hexo-cli -g
+// 切源
+npm config set registry https://registry.npm.taobao.org
+npm config get registry
+// 样式
+npm install hexo-renderer-jade --save
+npm install hexo-renderer-sass --save
+
+
+【hexo】
+hexo init [folder]
+hexo new [layout] <title>  // 位置 抬头
+
+// 全量
+hexo generate 
+	-d, --deploy	Deploy after generation finishes
+	-w, --watch	Watch file changes
+	
+// 指定
+hexo publish [layout] <filename>
+
+// 启动
+hexo server
+	-p, --port	Override default port
+	-s, --static	Only serve static files
+	-l, --log	Enable logger. Override logger format.
+	
+//部署
+hexo deploy
+	-g, --generate	Generate before deployment
