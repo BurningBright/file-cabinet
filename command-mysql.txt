@@ -1,4 +1,10 @@
-﻿【字符串函数】
+﻿【查表行数】
+use information_schema;
+select table_name,table_rows from tables
+where TABLE_SCHEMA = 'xxx'
+order by table_rows desc;
+
+【字符串函数】
 1. 字符串截取：left(str, length)
 mysql> select left('example.com', 3);
 +-------------------------+
@@ -77,12 +83,18 @@ mysql> select right('example.com', 3);
 	| www.example.com                                   |
 	+---------------------------------------------------+
 
-【sql】
+【sql日期函数、正则函数】
 select * from uls_order t where 
 	t.operation_time > date_format(date_sub(sysdate(), INTERVAL 0 DAY), '%Y-%m-%d') 
 	AND t.operation_time < date_format(date_sub(sysdate(), INTERVAL -1 DAY), '%Y-%m-%d');
 
+str_to_date('30-09-2015 23:57:00','%d-%m-%Y %H:%i:%S')
+date_format(date,'%Y-%m-%d')     -------------->oracle中的to_char();
+str_to_date(date,'%Y-%m-%d')     -------------->oracle中的to_date();
+
 SELECT * FROM dsp_unit t1 WHERE CONCAT(',',t1.visitor_recall,',') REGEXP '[,]16[,]';
+
+
 
 【mysql命名】
 mysql -u name -p password -h host
@@ -102,11 +114,6 @@ flush privileges;
 
 mysqldump -u 用户名 -p 数据库名 > 导出的文件名
 source [address]
-
-
-str_to_date('30-09-2015 23:57:00','%d-%m-%Y %H:%i:%S')
-date_format(date,'%Y-%m-%d')     -------------->oracle中的to_char();
-str_to_date(date,'%Y-%m-%d')     -------------->oracle中的to_date();
 
 
 
