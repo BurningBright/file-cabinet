@@ -1,3 +1,36 @@
+【java编译命令】
+javac CommandInput.java -d ../../bin
+javac GlobalTemplateVariables.java -d ./ -classpath D:\eclipse\plugins\com.ibm.icu_54.1.1.v201501272100.jar;D:\eclipse\plugins\org.eclipse.text_3.5.0.v20100601-1300_backup.jar;	//-d强制指定路径，会覆盖原有文件;不加-d如果有老文件，会出现在java目录
+
+java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
+java -classpath xxx.jar x.xx.xxx.class [args]
+java -jar xxx\mybatis-generator-core-1.3.2.jar -configfile xxx\generator.xml -overwrite
+
+#主类带包路径-带路径编译(或指定路径)-带路径执行(或指定目标)
+javac cn/lcg/multi/App.java
+java cn/lcg/multi/App
+E:\workspace\algorithms-fourth-edition\bin> java solution03/c01/FrequencyCounter 12 < ../lib/ATALEO~2.txt
+
+
+【JVM参数】
+# -Xms 初始物理/ -Xmx 最大物理/ -XX:PermSize 永久保存区/ -XX:MaxNewSize 最大堆区
+set JAVA_OPTS=-Xms512m -Xmx512m -XX:PermSize=128M -XX:MaxPermSize=256m -XX:MaxNewSize=256m
+# 啰嗦模式 输出所加载的类全名
+-verbose:class
+# 服务器模式 
+-server
+
+
+【环境变量】
+%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+
+export JAVA_HOME=/usr/share/jdk1.8.0_20
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+
+
 【linux命令】
 /etc/inittab	启动界面设置	3命令行、5图形界面
 
@@ -175,30 +208,6 @@ systemctl restart sshd         #重启openssh
  * @date ${date} ${time}
  * ${tags}
  */
-
-
-【java编译命令】
-javac CommandInput.java -d ../../bin
-javac GlobalTemplateVariables.java -d ./ -classpath D:\eclipse\plugins\com.ibm.icu_54.1.1.v201501272100.jar;D:\eclipse\plugins\org.eclipse.text_3.5.0.v20100601-1300_backup.jar;	//-d强制指定路径，会覆盖原有文件;不加-d如果有老文件，会出现在java目录
-
-java -cp ../../bin day053.CommandInput xxx xxx xxx xxx
-java -classpath xxx.jar x.xx.xxx.class [args]
-java -jar xxx\mybatis-generator-core-1.3.2.jar -configfile xxx\generator.xml -overwrite
-
-主类带包路径-带路径编译(或指定路径)-带路径执行(或指定目标)
-javac cn/lcg/multi/App.java
-java cn/lcg/multi/App
-E:\workspace\algorithms-fourth-edition\bin> java solution03/c01/FrequencyCounter 12 < ../lib/ATALEO~2.txt
-
-
-【环境变量】
-%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
-.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
-
-export JAVA_HOME=/usr/share/jdk1.8.0_20
-export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-
 
 
 
