@@ -14,6 +14,7 @@ head = '<!DOCTYPE html>\
 <html xmlns="http://www.w3.org/1999/xhtml" prefix lang="en-US">\
 <head>\
 <meta charset="UTF-8">\
+<link rel="stylesheet" href="./style.css">\
 </head>\
 <body class="page-template-default page page-id-62153 page-child parent-pageid-42349 custom-background group-blog">\
 '
