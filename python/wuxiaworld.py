@@ -4,8 +4,8 @@ import socket
 import urllib2
 import re
 
-chapterStart = 197
-chapterNum = 4
+chapterStart = 299
+chapterNum = 2
 targetUrl = 'http://www.wuxiaworld.com/renegade-index/renegade-chapter-'
 
 filePath = 'C:\\Users\\Chen\\Desktop\\Renegade-Immortal\\'
@@ -35,10 +35,16 @@ def __call__():
         time.sleep(3)
         return __call__()
     except socket.timeout as e:  
-        print 'out'
+        print 'out request'
         sys.stdout.flush()
         time.sleep(3)
         return __call__()
+    except Exception, e:
+        print 'base'
+        sys.stdout.flush()
+        time.sleep(3)
+        return __call__()
+    
     return response
 '''
     except urllib2.HTTPError, e:
@@ -66,11 +72,26 @@ def __call__():
 
 
 
-for i in range(chapterStart, chapterStart + chapterNum):
+#for i in range(chapterStart, chapterStart + chapterNum):
 #    request = urllib2.Request(targetUrl + str(i) + '/', headers = headers)
 #    response = urllib2.urlopen(request, data=None, timeout=10)
+
+i=chapterStart
+while i < chapterStart + chapterNum :
     response = __call__()
-    data = response.read()
+    try:
+        data = response.read()
+    except socket.timeout as e:  
+        print 'out read'
+        sys.stdout.flush()
+        i -= 1
+        continue
+    except Exception, e:
+        print 'base read'
+        sys.stdout.flush()
+        i -= 1
+        continue
+    
     # pick data
     pattern = re.compile('<div itemprop="articleBody">.*?(?=<div class="code-block)', re.S)
     matcher = re.search(pattern, data)
@@ -88,6 +109,8 @@ for i in range(chapterStart, chapterStart + chapterNum):
     f.write(head + article + foot)
     f.close()
     print 'finish ' + str(i)
+    
+    i += 1
     sys.stdout.flush()
     # sleep a while
     time.sleep(3)
