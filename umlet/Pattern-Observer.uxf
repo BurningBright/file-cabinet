@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>22</y>
+      <w>341</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+LifecycleBase
+--
+LifecycleSupport lifecycle
+--
+fireLifecycleEvent(String type, Object data):void
+--
+调用支持中的方法</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>275</y>
+      <w>341</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>LifecycleSupport
+--
+LifecycleListener listeners[]
+--
+fireLifecycleEvent(String type, Object data):void
+--
+循环调用注册监听，让每个观察者过目</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>506</y>
+      <w>308</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+LifecycleListener
+--
+lifecycleEvent(LifecycleEvent event): void
+--
+监听【观察】的抽象</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>506</y>
+      <w>308</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>HeartbeatListener
+--
+lifecycleEvent(LifecycleEvent event): void
+--
+真实的观察人员，决定是否做出反应</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>561</y>
+      <w>154</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>22</y>
+      <w>220</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+LifecycleMBeanBase
+--
+
+--
+二级抽象</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>319</x>
+      <y>33</y>
+      <w>209</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>352</y>
+      <w>253</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>LifecycleMBeanBase
+--
+addService(Service service): void
+--
+事发现场、报告事件</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>209</x>
+      <y>121</y>
+      <w>33</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>88</y>
+      <w>176</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1</panel_attributes>
+    <additional_attributes>140.0;10.0;40.0;10.0;40.0;270.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>374</y>
+      <w>33</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>330</y>
+      <w>121</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+3</panel_attributes>
+    <additional_attributes>10.0;200.0;50.0;200.0;50.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>99</y>
+      <w>77</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+2</panel_attributes>
+    <additional_attributes>50.0;210.0;10.0;210.0;10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>671</x>
+      <y>154</y>
+      <w>33</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
