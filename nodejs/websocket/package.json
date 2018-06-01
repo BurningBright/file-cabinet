@@ -1,0 +1,14 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "websocket-demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leon",
+  "license": "ISC",
+  "dependencies": {
+    "sha1": "^1.1.1"
+  }
+}
