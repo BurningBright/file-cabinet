@@ -6,7 +6,8 @@ let adSelectors = [
   '#adContent',
   '#reportContent',
   '.recommend-box',
-  '.recommend-right'
+  '.recommend-right',
+  '.pulllog-box'
 ]
 
 document.querySelectorAll(adSelectors.join(',')).forEach(item => {
