@@ -10,7 +10,8 @@ let adSelectors = [
   '.pulllog-box',
   '#article_content a img',
   '.login-mark',
-  '#passportbox'
+  '#passportbox',
+  '.mediav_ad'
 ]
 
 document.querySelectorAll(adSelectors.join(',')).forEach(item => {
