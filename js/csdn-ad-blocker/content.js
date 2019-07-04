@@ -18,6 +18,6 @@ document.querySelectorAll(adSelectors.join(',')).forEach(item => {
   item.style.display = 'none'
 })
 
-var readmore = document.getElementById("btn-readmore");
+var readmore = document.getElementsByClassName("btn-readmore");
 readmore.removeAttribute('data-track-click');
 readmore.click();
