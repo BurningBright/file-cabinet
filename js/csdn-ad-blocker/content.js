@@ -19,5 +19,8 @@ document.querySelectorAll(adSelectors.join(',')).forEach(item => {
 })
 
 var readmore = document.getElementsByClassName("btn-readmore");
-readmore.removeAttribute('data-track-click');
-readmore.click();
+if (readmore != null) {
+    readmore[0].removeAttribute('data-track-click');
+    readmore[0].removeAttribute('data-report-click');
+    readmore[0].click();
+}
